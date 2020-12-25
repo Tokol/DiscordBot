@@ -49,7 +49,7 @@ client.on('message', message =>{
         client.commands.get('fav').execute(message, args);
     }  
     
-    else if(command==='flirt tiny'){
+    else if(command==='flirt'){
         client.commands.get('tiny').execute(message, args);
     }
 
