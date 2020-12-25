@@ -50,7 +50,15 @@ client.on('message', message =>{
     }  
     
     else if(command==='flirt'){
-        client.commands.get('tiny').execute(message, args);
+        if(message.author.username=="Kafka#2069"){
+            client.commands.get('tiny').execute(message, args);
+        }
+
+        else{
+            message.channel.send('This command is only works for Kafka');
+              
+        }
+      
     }
 
 
