@@ -56,5 +56,5 @@ client.on('message', message =>{
         message.channel.send('@'+message.author.username+" You need to enter a valid command!");
     }
 });
-    
-client.login(config.token);
+
+client.login(pricess.env.DISCORD_TOKEN);
