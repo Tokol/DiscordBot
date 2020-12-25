@@ -6,7 +6,7 @@ const ytdl = require('ytdl-core');
 const client = new Discord.Client();
 
 
-const prefix = '-h ';
+const prefix = '-hal ';
 
 const fs = require('fs');
 
