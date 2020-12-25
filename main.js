@@ -47,7 +47,11 @@ client.on('message', message =>{
 
     else if(command=='fav'){
         client.commands.get('fav').execute(message, args);
-    }      
+    }  
+    
+    else if(command=='flirt tiny'){
+        client.commands.get('tiny').execute(message, args);
+    }
 
 
         
