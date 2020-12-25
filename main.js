@@ -9,7 +9,7 @@ const client = new Discord.Client();
 const prefix = '-h ';
 
 const fs = require('fs');
-const config = require('./config');
+
 
 client.commands = new Discord.Collection();
 
@@ -57,4 +57,4 @@ client.on('message', message =>{
     }
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.jKadtGW30rpF2b3Otl70wiMAZ1o');
