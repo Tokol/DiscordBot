@@ -2,23 +2,28 @@
 const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
-const bgImage = "https://science.sciencemag.org/content/sci/366/6472/1468.6/F1.large.jpg?width=800&height=600&carousel=1";
+const bgImage = "https://bgr.com/wp-content/uploads/2018/11/halll.png";
 
 module.exports = {
     name: 'code',
     description: "This command view game code!",
-   async  execute(message, args){
+     execute(message, args){
     
-   
-var img= "https://textoverimage.moesif.com/image?image_url="+bgImage+"?text= Game ko Code "+args[0]+"Ho"+"&text_color=2912f6ff&text_size=128&y_align=middle&x_align=center";
+   https://bgr.com/wp-content/uploads/2018/11/halll.png
+var img= 'https://textoverimage.moesif.com/image?image_url=https://science.sciencemag.org/content/sci/366/6472/1468.6/F1.large.jpg?width=800&height=600&carousel=1&text=Game ko Code'+args[0]+" Ho"+'&text_color=2912f6ff&text_size=128&y_align=middle&x_align=center';
 
-message.channel.send(args[0]);
-message.channel.send(args[1]);
+
+
+console.log(bgImage);
+message.channel.send("Game ko code", {files: [img]});
+
+
+        //    const embed = new Discord.MessageEmbed()
+        //     .setTitle('Game Code')
+        //     .setImage(img)
     
-           const embed = new Discord.MessageEmbed()
-            .setTitle('Game Code')
-            .setImage(img)
-            message.channel.send(embed);
+            
+        //     message.channel.send(embed);
 
 
             //target.avatarURL;
