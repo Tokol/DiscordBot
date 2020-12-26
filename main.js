@@ -191,6 +191,3 @@ else if (command==="unmute"){
 
 
 client.login(process.env.DISCORD_TOKEN);
-//client.login("NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.8W8M7qEQY6UefPG0Vsw9pKb-yIE");
-
-//NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.8W8M7qEQY6UefPG0Vsw9pKb-yIE
