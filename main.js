@@ -106,6 +106,14 @@ else if(command=="choila?"){
 }
 
 
+else if(command=="comrade?"){
+    client.commands.get('comrade').execute(message, args);
+}
+
+
+
+
+
 else if (command==="clear"){
     if(message.author.id==kafkaId){
         client.commands.get('clear').execute(message, args);
