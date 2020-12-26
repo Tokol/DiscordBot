@@ -116,6 +116,21 @@ else if (command==="clear"){
 
 }
 
+
+else if(command==="kick"){
+
+    if(message.author.username=="Kafka"){
+        //client.commands.get('kick').execute(message, args);
+        message.channel.send(message.author.id);
+    }
+
+        else {
+            message.channel.send('This command only work for Kafka');
+        }
+
+    
+}
+
 // else if(command==="@"){
 //     client.commands.get('shreya').execute(message, args);
 // }
