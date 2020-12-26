@@ -105,7 +105,7 @@ else if(command==="shreya?"){
 
     else{
         msg.reply('You need to enter a valid command!');
-       // message.channel.send( You need to enter a valid command!`)
+        message.channel.send( 'You need to enter a valid command!');
        
     }
 });
