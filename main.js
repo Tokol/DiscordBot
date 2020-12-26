@@ -172,7 +172,10 @@ else if (command==="unmute"){
             client.commands.get('cat').execute(message,args);
         }
                 
-
+        else if(command=="suicide"){
+            client.commands.get('suicide').execute(message,args);
+        }
+           
 
 
     else{

@@ -21,7 +21,19 @@ module.exports = {
 
            // message.channel.send("User has been banned");
         }else{
-            message.channel.send(`You coudn't find that member!`);
+
+            const url = message.author.displayAvatarURL({ dynamic: true, size: 256});
+
+            const embed = new Discord.MessageEmbed()
+            .setTitle(target.username)
+            .setDescription('Ko DP herera react gar')
+            .setImage(url)
+
+            message.channel.send(embed);
+                               
+
+                
+        
         }
     }
 }
