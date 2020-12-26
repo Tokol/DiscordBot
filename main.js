@@ -99,12 +99,13 @@ else if(command==="shreya?"){
     client.commands.get('shreya').execute(message, args);
 }
 
-else if(command==="@"){
-    client.commands.get('shreya').execute(message, args);
-}
+// else if(command==="@"){
+//     client.commands.get('shreya').execute(message, args);
+// }
 
     else{
-        message.channel.send(`<@${message.author.username}> You need to enter a valid command!`)
+        msg.reply('You need to enter a valid command!');
+       // message.channel.send( You need to enter a valid command!`)
        
     }
 });
