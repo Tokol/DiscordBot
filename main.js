@@ -104,7 +104,7 @@ else if(command==="@"){
 }
 
     else{
-        message.channel.send(`@${message.author.username} You need to enter a valid command!`)
+        message.channel.send(`<@${message.author.username}> You need to enter a valid command!`)
        
     }
 });
