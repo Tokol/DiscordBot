@@ -119,7 +119,7 @@ else if (command==="clear"){
 
 else if(command==="kick"){
 
-    if(message.author.username=="Kafka"){
+    if(message.author.id==319740211255050242){
         //client.commands.get('kick').execute(message, args);
         message.channel.send(message.author.id);
     }
