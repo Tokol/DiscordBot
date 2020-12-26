@@ -162,11 +162,14 @@ else if (command==="unmute"){
 }
 
 
+        else if(command=="av?"){
+
+                client.command.get('avatar').execute(message,args);
+
+        }
+                
 
 
-// else if(command==="@"){
-//     client.commands.get('shreya').execute(message, args);
-// }
 
     else{
        // msg.reply('You need to enter a valid command!');
@@ -176,6 +179,6 @@ else if (command==="unmute"){
 });
 
 
-client.login(process.env.DISCORD_TOKEN);
-
+//client.login(process.env.DISCORD_TOKEN);
+client.login("NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.CG8FK7XqAiqGwPAAlO_PPK_jv10");
 //
