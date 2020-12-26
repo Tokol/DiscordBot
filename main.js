@@ -99,6 +99,14 @@ else if(command==="shreya?"){
     client.commands.get('shreya').execute(message, args);
 }
 
+
+else if (command==="clear"){
+
+        
+
+
+}
+
 // else if(command==="@"){
 //     client.commands.get('shreya').execute(message, args);
 // }
