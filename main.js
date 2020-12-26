@@ -141,6 +141,29 @@ else if(command==="ban"){
         }
 }
 
+
+else if (command=="mute"){
+    if(message.author.id==kafkaId){
+        client.commands.get('mute').execute(message, args);
+    }              
+        else {
+            message.channel.send('This command only work for Kafka');
+        }
+}
+
+
+else if (command=="unmute"){
+    if(message.author.id==kafkaId){
+        client.commands.get('unmute').execute(message, args);
+    }              
+        else {
+            message.channel.send('This command only work for Kafka');
+        }
+}
+
+
+
+
 // else if(command==="@"){
 //     client.commands.get('shreya').execute(message, args);
 // }
