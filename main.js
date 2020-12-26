@@ -102,8 +102,8 @@ else if(command==="shreya?"){
 
 else if (command==="clear"){
 
-        
 
+client.commands.get('clear').execute(message, args);
 
 }
 
