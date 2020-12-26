@@ -20,20 +20,9 @@ module.exports = {
             message.channel.send(embed);
 
            // message.channel.send("User has been banned");
-        }else{
-
-            // const url = message.author.displayAvatarURL({ dynamic: true, size: 256});
-
-            // const embed = new Discord.MessageEmbed()
-            // .setTitle(target.username)
-            // .setDescription('Ko DP herera react gar')
-            // .setImage(url)
-
-            // message.channel.send(embed);
-                               
+        }else{                               
             message.channel.send("no user found");
-
-
+                
         }
     }
 }
