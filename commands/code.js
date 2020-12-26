@@ -12,8 +12,8 @@ module.exports = {
    
 var img= "https://textoverimage.moesif.com/image?image_url="+bgImage+"?text= Game ko Code "+args[0]+"Ho"+"&text_color=2912f6ff&text_size=128&y_align=middle&x_align=center";
 
-          
-
+message.channel.send(img);
+        
            const embed = new Discord.MessageEmbed()
             .setTitle('Game Code')
             .setImage(img)
