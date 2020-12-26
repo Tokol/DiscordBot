@@ -72,6 +72,10 @@ else if(command==='saurav?'){
     client.commands.get('saurav').execute(message, args);
 }
 
+else if(command==='napper?'){
+    client.commands.get('napper').execute(message, args);
+}
+
 
 
         
