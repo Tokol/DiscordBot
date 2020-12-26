@@ -164,8 +164,12 @@ else if (command==="unmute"){
 
         else if(command=="av?"){
 
-                client.command.get('avatar').execute(message,args);
+                client.commands.get('avatar').execute(message,args);
 
+        }
+
+        else if(command=="cat"){
+            client.commands.get('cat').execute(message,args);
         }
                 
 
@@ -179,6 +183,6 @@ else if (command==="unmute"){
 });
 
 
-//client.login(process.env.DISCORD_TOKEN);
-client.login("NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.CG8FK7XqAiqGwPAAlO_PPK_jv10");
+client.login(process.env.DISCORD_TOKEN);
+//client.login("NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g._CTIsT2smjusuvx9zjQRMiRZhko");
 //

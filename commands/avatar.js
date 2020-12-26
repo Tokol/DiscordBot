@@ -1,6 +1,8 @@
+
+const Discord = require('discord.js');
 module.exports = {
-    name: 'ban',
-    description: "This command bans a member!",
+    name: 'avatar',
+    description: "This command view avatar a member!",
     execute(message, args){
         const target = message.mentions.users.first();
         if(target){
@@ -8,10 +10,14 @@ module.exports = {
 
            // const memberTarget = message.guild.members.cache.get(target.id);
             //memberTarget.get.
-            const embed = new Discord.RichEmbed()
-            .setImage(target.avatarURL)
+            const url = target.displayAvatarURL({ dynamic: true, size: 256});
 
-            message.channel.sendEmbed(embed);
+            const embed = new Discord.MessageEmbed()
+            .setTitle(target.username)
+            .setDescription('Ko DP herera react gar')
+            .setImage(url)
+
+            message.channel.send(embed);
 
            // message.channel.send("User has been banned");
         }else{
