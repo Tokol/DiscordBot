@@ -100,6 +100,11 @@ else if(command==="shreya?"){
 }
 
 
+else if(command=="choila?"){
+    client.commands.get('choila').execute(message, args);
+}
+
+
 else if (command==="clear"){
     if(message.author.username=="Kafka"){
         client.commands.get('clear').execute(message, args);
