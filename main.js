@@ -94,6 +94,11 @@ else if(command==="lakpa?"){
     client.commands.get('lakpa').execute(message, args);
 }
 
+
+else if(command==="shreya?"){
+    client.commands.get('shreya').execute(message, args);
+}
+
     else{
         message.channel.send('@'+message.author.username+" You need to enter a valid command!");
     }
