@@ -97,9 +97,9 @@ module.exports = {
 
 
 
-            message.channel.send("Hey! "+target.username+" "+flirtText);
+            message.channel.send("Hey! "+target.username+", "+flirtText);
 
-                
+
 
            //return  message.channel.
         }else{
