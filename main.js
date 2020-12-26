@@ -10,6 +10,7 @@ const prefix = '-hal ';
 
 const fs = require('fs');
 
+const kafkaId = 319740211255050242;
 
 client.commands = new Discord.Collection();
 
@@ -106,7 +107,7 @@ else if(command=="choila?"){
 
 
 else if (command==="clear"){
-    if(message.author.username=="Kafka"){
+    if(message.author.id==kafkaId){
         client.commands.get('clear').execute(message, args);
     }
 
@@ -119,11 +120,10 @@ else if (command==="clear"){
 
 else if(command==="kick"){
 
-    if(message.author.id==319740211255050242){
-        //client.commands.get('kick').execute(message, args);
-        message.channel.send(message.author.id);
-    }
-
+    if(message.author.id==kafkaId){
+        client.commands.get('kick').execute(message, args);
+    }   
+                    
         else {
             message.channel.send('This command only work for Kafka');
         }
