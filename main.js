@@ -99,9 +99,15 @@ else if(command==="shreya?"){
     client.commands.get('shreya').execute(message, args);
 }
 
+else if(command==="@"){
+    client.commands.get('shreya').execute(message, args);
+}
+
     else{
-        message.channel.send('@'+message.author.username+" You need to enter a valid command!");
+        message.channel.send(`${message.author.username} You need to enter a valid command!`)
+       
     }
 });
+
 
 client.login(process.env.DISCORD_TOKEN);
