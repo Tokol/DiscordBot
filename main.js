@@ -101,9 +101,13 @@ else if(command==="shreya?"){
 
 
 else if (command==="clear"){
+    if(message.author.username=="Kafka"){
+        client.commands.get('clear').execute(message, args);
+    }
 
-
-client.commands.get('clear').execute(message, args);
+        else {
+            message.channel.send('This command only work for Kafka');
+        }
 
 }
 
