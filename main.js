@@ -142,7 +142,7 @@ else if(command==="ban"){
 }
 
 
-else if (command=="mute"){
+else if (command==="mute"){
     if(message.author.id==kafkaId){
         client.commands.get('mute').execute(message, args);
     }              
@@ -152,7 +152,7 @@ else if (command=="mute"){
 }
 
 
-else if (command=="unmute"){
+else if (command==="unmute"){
     if(message.author.id==kafkaId){
         client.commands.get('unmute').execute(message, args);
     }              
