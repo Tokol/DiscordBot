@@ -80,6 +80,10 @@ else if(command==='napper?'){
 else if(command==="ray10?"){
     client.commands.get('ray').execute(message, args);
 }
+
+else if(command==="bigdaddy?"){
+    client.commands.get('bigdaddy').execute(message, args);
+}
         
 
     else{
