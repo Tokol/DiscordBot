@@ -69,8 +69,8 @@ else if(command==='kafka?'){
 
 
 else if(command==='saurav?'){
-
-}client.commands.get('saurav').execute(message, args);
+    client.commands.get('saurav').execute(message, args);
+}
 
 
 
