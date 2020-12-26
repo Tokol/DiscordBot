@@ -123,12 +123,22 @@ else if(command==="kick"){
     if(message.author.id==kafkaId){
         client.commands.get('kick').execute(message, args);
     }   
-                    
+
         else {
             message.channel.send('This command only work for Kafka');
         }
 
     
+}
+
+
+else if(command==="ban"){
+    if(message.author.id==kafkaId){
+        client.commands.get('ban').execute(message, args);
+    }              
+        else {
+            message.channel.send('This command only work for Kafka');
+        }
 }
 
 // else if(command==="@"){

@@ -1,7 +1,14 @@
 module.exports = {
     name: 'ban',
-    description: "this is a ban command!",
+    description: "This command bans a member!",
     execute(message, args){
-        message.channel.send('hi i am a bot creator');
+        const target = message.mentions.users.first();
+        if(target){
+            const memberTarget = message.guild.members.cache.get(target.id);
+            memberTarget.ban();
+            message.channel.send("User has been banned");
+        }else{
+            message.channel.send(`You coudn't ban that member!`);
+        }
     }
 }
