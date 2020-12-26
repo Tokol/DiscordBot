@@ -50,17 +50,17 @@ client.on('message', message =>{
         client.commands.get('fav').execute(message, args);
     }  
     
-    else if(command==='flirt'){
-        if(message.author.username=="Kafka"){
-            client.commands.get('tiny').execute(message, args);
-        }
+    // else if(command==='flirt'){
+    //     if(message.author.username=="Kafka"){
+    //         client.commands.get('tiny').execute(message, args);
+    //     }
 
-        else{
-            message.channel.send('This command only work for Kafka');
+    //     else{
+    //         message.channel.send('This command only work for Kafka');
 
-        }
+    //     }
       
-    }
+    // }
 
 
 else if(command==='kafka?'){
@@ -192,6 +192,20 @@ else if (command==="unmute"){
         }
            
 
+        else if(command=="flirt"){
+
+
+            if(message.author.username=="Kafka"){
+                client.commands.get('flirt').execute(message, args);
+            }
+    
+            else{
+                message.channel.send('This command only work for Kafka');
+    
+            }
+
+        }
+
 
     else{
        // msg.reply('You need to enter a valid command!');
@@ -201,4 +215,5 @@ else if (command==="unmute"){
 });
 
 
-client.login(process.env.DISCORD_TOKEN);
+//client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.X264BL66ZxWvXQdkYHgjsAvH_DE');
