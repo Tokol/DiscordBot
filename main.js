@@ -84,7 +84,11 @@ else if(command==="ray10?"){
 else if(command==="bigdaddy?"){
     client.commands.get('bigdaddy').execute(message, args);
 }
-        
+    
+
+else if(command==="heaven?"){
+    client.commands.get('heaven').execute(message, args);
+}
 
     else{
         message.channel.send('@'+message.author.username+" You need to enter a valid command!");
