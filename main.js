@@ -55,11 +55,17 @@ client.on('message', message =>{
         }
 
         else{
-            message.channel.send('This command is only works for Kafka');
+            message.channel.send('This command only work for Kafka');
 
         }
       
     }
+
+
+else if(command==='kafka?'){
+    client.commands.get('kafka').execute(message, args);
+}
+
 
 
         
