@@ -16,10 +16,18 @@ var opneWeather = "http://api.openweathermap.org/data/2.5/weather?q=";
         }
 
         else{
+            console.log(args.length);
+
+            var  argsTotal="";
+            for ( i=0; i<args.length; i++){
+                argsTotal = argsTotal+" "+args[i];
+            }
+
+            console.log(argsTotal);
             var response;
           
 
-            await  fetch(opneWeather+args[0]+'&appid='+weatherAPI+'&units=metric')
+            await  fetch(opneWeather+argsTotal+'&appid='+weatherAPI+'&units=metric')
             
             .then(res => res.json())
             .then(json => 
@@ -29,7 +37,7 @@ var opneWeather = "http://api.openweathermap.org/data/2.5/weather?q=";
 
                     if(response.hasOwnProperty('main')){
                         var embed = new Discord.MessageEmbed()
-                        .setTitle('Weather of '+args[0])
+                        .setTitle('Weather of '+argsTotal)
                         .setDescription('Condition: '+ response['weather'][0]['description']+'\nQuery City: '+args[0]+'\n Feels like: '+response['main']['feels_like']+'°C'+'\n Actual temp is: '+ response['main']['temp']+'°C'+'\nPressure: '+response['main']['pressure']+'Pa'+'\n humidity: '+response['main']['humidity']+'%'+'\n wind: '+response['wind']['speed']+' m/s'+ '\nVisibility: '+ response['visibility']+' meter')
                         
                         message.channel.send(embed);
