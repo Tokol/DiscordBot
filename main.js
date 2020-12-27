@@ -210,14 +210,12 @@ else if (command==="unmute"){
         }
 
 
+        else if(command==="currency"){
+            client.commands.get('money').execute(message,args);
+        }
+            
 
-
-
-
-
-           
-
-        else if(command=="flirt"){
+            else if(command=="flirt"){
 
 
             if(message.author.username=="Kafka"){
@@ -240,5 +238,6 @@ else if (command==="unmute"){
 });
 
 
-client.login(process.env.DISCORD_TOKEN);
-
+//client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.nkWoR9JgQmiOynHa4ssO4guWjL0');
+//NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.nkWoR9JgQmiOynHa4ssO4guWjL0
