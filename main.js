@@ -111,6 +111,10 @@ else if(command=="comrade?"){
 }
 
 
+else if(command=="apeksha?"){
+    client.commands.get('apeksha').execute(message, args);
+}
+
 
 
 
