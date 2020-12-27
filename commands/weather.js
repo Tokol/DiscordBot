@@ -38,7 +38,7 @@ var opneWeather = "http://api.openweathermap.org/data/2.5/weather?q=";
                     if(response.hasOwnProperty('main')){
                         var embed = new Discord.MessageEmbed()
                         .setTitle('Weather of '+argsTotal)
-                        .setDescription('Condition: '+ response['weather'][0]['description']+'\nQuery City: '+args[0]+'\n Feels like: '+response['main']['feels_like']+'°C'+'\n Actual temp is: '+ response['main']['temp']+'°C'+'\nPressure: '+response['main']['pressure']+'Pa'+'\n humidity: '+response['main']['humidity']+'%'+'\n wind: '+response['wind']['speed']+' m/s'+ '\nVisibility: '+ response['visibility']+' meter')
+                        .setDescription('Condition: '+ response['weather'][0]['description']+'\nQuery City: '+argsTotal+'\n Feels like: '+response['main']['feels_like']+'°C'+'\n Actual temp is: '+ response['main']['temp']+'°C'+'\nPressure: '+response['main']['pressure']+'Pa'+'\n humidity: '+response['main']['humidity']+'%'+'\n wind: '+response['wind']['speed']+' m/s'+ '\nVisibility: '+ response['visibility']+' meter')
                         
                         message.channel.send(embed);
                     }
