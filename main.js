@@ -190,6 +190,27 @@ else if (command==="unmute"){
         else if (command=="code"){
             client.commands.get('code').execute(message,args);
         }
+
+
+        else if(command==="morning"){
+            client.commands.get('morning').execute(message,args);
+        }
+
+        else if(command==="night"){
+            client.commands.get('night').execute(message,args);
+        }
+
+
+        else if(command==="weather"){
+            client.commands.get('weather').execute(message,args);
+        }
+
+
+
+
+
+
+
            
 
         else if(command=="flirt"){
@@ -215,4 +236,5 @@ else if (command==="unmute"){
 });
 
 
-client.login(process.env.DISCORD_TOKEN);
+//client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.i9hI2COLvDiVczDJm9pkozFcFb4');

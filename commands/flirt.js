@@ -4,7 +4,6 @@ module.exports = {
     execute(message, args){
 
 
-   
 
 
         const target = message.mentions.users.first();
@@ -97,9 +96,11 @@ module.exports = {
 
 
 
-            message.channel.send("Hey! "+target.username+", "+flirtText);
 
 
+            message.channel.send("Hey! "+target.username+" "+flirtText);
+
+//            const memberTarget = message.guild.members.cache.get(target.id);
 
            //return  message.channel.
         }else{
