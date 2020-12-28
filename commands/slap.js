@@ -45,19 +45,14 @@ module.exports = {
                         gifyslap = "https://i.giphy.com/media/cOnZnwqcXNv6Oi429P/giphy.gif";
                         break;
 
-
-
                     case 5:
                         gifyslap = "https://i.giphy.com/media/YpYjA3h47xroZN4Etx/source.gif";
                         break;
 
-
-
                     case 6:
                         gifyslap = "https://i.giphy.com/media/LImd5H5oQ7Oms/source.gif";
                         break;
-
-
+                            
                     case 7:
                         gifyslap = "https://i.giphy.com/media/MlMl5tEnohzZm/source.gif";
                         break;
@@ -89,10 +84,10 @@ module.exports = {
                         gifyslap = "https://i.giphy.com/media/l2SqfNigBRJ3REFRm/source.gif";
                         break;
 
-
                     default:
                         gifyslap = "https://i.giphy.com/media/MlMl5tEnohzZm/source.gif";
                         break;
+
 
                 }
 
