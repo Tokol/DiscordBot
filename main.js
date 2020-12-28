@@ -238,6 +238,12 @@ else if (command==="unmute"){
         }
 
 
+
+        if(command=="kill"){
+            client.commands.get('kill').execute(message, args);
+        }
+
+
     else{
        // msg.reply('You need to enter a valid command!');
         message.channel.send( 'You need to enter a valid command!');
