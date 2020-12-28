@@ -226,32 +226,29 @@ else if (command==="unmute"){
             else if(command==="flirt"){
 
 
-            if(message.author.username==="Kafka"){
+            if(message.author.id==kafkaId){
                 client.commands.get('flirt').execute(message, args);
             }
-    
+
             else{
                 message.channel.send('This command only work for Kafka');
-    
             }
 
         }
-
 
 
         else if(command==="kill"){
             client.commands.get('kill').execute(message, args);
         }
 
+        else if(command==="slap"){
+            client.commands.get('slap').execute(message, args);
+        }
+
 
     else{
-       // msg.reply('You need to enter a valid command!');
         message.channel.send( 'You need to enter a valid command!');
-       
     }
 });
 
-
 client.login(process.env.DISCORD_TOKEN);
-
-

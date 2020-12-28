@@ -101,7 +101,7 @@ module.exports = {
                     .setTitle(message.author.username + " kill " + target.username)
                     .setImage(gifykill)
                 message.channel.send(embed);
-
+                    
 
 
             }
