@@ -239,7 +239,7 @@ else if (command==="unmute"){
 
 
 
-        if(command==="kill"){
+        else if(command==="kill"){
             client.commands.get('kill').execute(message, args);
         }
 
