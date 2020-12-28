@@ -10,28 +10,24 @@ module.exports = {
       
  var books = [];
 
- books[0]="The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt";
- books[1]="Thinking Fast and Slow by Politics and Religion by Daniel Kahneman";
- books[2]="Bad Science by Ben Goldacre";
- books[3]="Meditations by Marcus Aurelius";
- books[4]="The Design of Everyday Things by Don Norman";
- books[5]="The Art of War by Sun Tzu";
- books[6]="Your Mind and how to Use it: A Manual of Practical Psychology by William Walker Atkinson";
- books[7]="Prisoners of Geography: Ten Maps That Tell You Everything You Need To Know About Global Politics by Tim Marshall";
- books[8]="The 7 Habits of Highly Effective People by Stephen Covey";
- books[9]="Why Nations Fail by Daron Acemoglu and James A. Robinson";
- books[10]="The Next 100 Years: A Forecast for the 21st Century by George Friedman";
+ books[0]="1. The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt"+"\n";
+ books[1]="2. Thinking Fast and Slow by Politics and Religion by Daniel Kahneman"+"\n";
+ books[2]="3. Bad Science by Ben Goldacre"+"\n";
+ books[3]="4. Meditations by Marcus Aurelius"+"\n";
+ books[4]="5. The Design of Everyday Things by Don Norman"+"\n";
+ books[5]="6. The Art of War by Sun Tzu"+"\n";
+ books[6]="7. Your Mind and how to Use it: A Manual of Practical Psychology by William Walker Atkinson"+"\n";
+ books[7]="8. Prisoners of Geography: Ten Maps That Tell You Everything You Need To Know About Global Politics by Tim Marshall"+"\n";
+ books[8]="9. The 7 Habits of Highly Effective People by Stephen Covey"+"\n";
+ books[9]="10. Why Nations Fail by Daron Acemoglu and James A. Robinson"+"\n";
+ books[10]="11. The Next 100 Years: A Forecast for the 21st Century by George Friedman"+"\n";
  
 
- var displayMessage = "";
- for (i=0; i<books.length; i++){
-    displayMessage = books[i]+"\n";
- }
 
 
 var embed = new Discord.MessageEmbed()
 .setTitle('Must Read book')
-.setDescription('Must read books sugestion from Kafka AKA HAL 9000\n'+displayMessage);
+.setDescription('Must read books sugestion from Kafka AKA HAL 9000\n'+"\n"+books[0]+'\n'+books[1]+'\n'+books[2]+'\n'+books[3]+'\n'+books[4]+'\n'+books[5]+'\n'+books[6]+'\n'+books[7]+'\n'+books[8]+'\n'+books[9]+'\n'+books[10]+'\n');
 
 message.channel.send(embed);
 
