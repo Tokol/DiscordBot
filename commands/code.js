@@ -15,7 +15,8 @@ var img= 'https://textoverimage.moesif.com/image?image_url=https://science.scien
 
 
 console.log(bgImage);
-message.channel.send("Game ko code", {files: [img]});
+console.log(img);
+message.channel.send("Game ko code ", {files: [img]});
 
 
         //    const embed = new Discord.MessageEmbed()

@@ -78,7 +78,7 @@ module.exports = {
                         gifykill = "https://i.giphy.com/media/JzsG0EmHY9eKc/source.gif";
                         break;
 
-
+                                
                     default:
                         gifyhug = "https://media.giphy.com/media/lz9H7hN30lHvq/source.gif";
                         break;
