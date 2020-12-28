@@ -246,6 +246,14 @@ else if (command==="unmute"){
         }
 
 
+        else if(command==="hug"){
+            client.commands.get('hug').execute(message, args);
+        }
+
+
+
+
+
     else{
         message.channel.send( 'You need to enter a valid command!');
     }

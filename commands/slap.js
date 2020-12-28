@@ -8,26 +8,17 @@ module.exports = {
     execute(message, args) {
         const target = message.mentions.users.first();
         if (target) {
-
-
             if (target.id == kafkaId) {
                 const embed = new Discord.MessageEmbed()
                 .setTitle('Kafka is a god')
                 .setDescription('Hey! '+ message.author.username+' You cannot slap a god')
             message.channel.send(embed);
-
             }
 
             else {
-
-
-
                 var random = Math.floor(Math.random() * 13) + 1
-
                 var gifyslap = "";
-
                 switch (random) {
-
                     case 1:
                         gifyslap = "https://i.giphy.com/media/gSIz6gGLhguOY/source.gif";
                         break;
@@ -40,7 +31,6 @@ module.exports = {
                         gifyslap = "https://i.giphy.com/media/3XlEk2RxPS1m8/source.gif";
                         break;
 
-
                     case 4:
                         gifyslap = "https://i.giphy.com/media/cOnZnwqcXNv6Oi429P/giphy.gif";
                         break;
@@ -52,21 +42,18 @@ module.exports = {
                     case 6:
                         gifyslap = "https://i.giphy.com/media/LImd5H5oQ7Oms/source.gif";
                         break;
-                            
+
                     case 7:
                         gifyslap = "https://i.giphy.com/media/MlMl5tEnohzZm/source.gif";
                         break;
-
 
                     case 8:
                         gifyslap = "https://i.giphy.com/media/Wy6tit6VeXBraTQNhC/source.gif";
                         break;
 
-
                     case 9:
                         gifyslap = "https://i.giphy.com/media/htdU64s0Dsr8k/giphy.gif";
                         break;
-
 
                     case 10:
                         gifyslap = "https://i.giphy.com/media/126yRbvk0QuEiQ/source.gif";
@@ -75,7 +62,7 @@ module.exports = {
                     case 11:
                         gifyslap = "https://i.giphy.com/media/lqdiBCQI7HLYZpZr2Q/source.gif";
                         break;
-                    //
+                    
                     case 12:
                         gifyslap = "https://i.giphy.com/media/fjxOktMff1aZ5Drxhe/source.gif";
                         break;
@@ -88,17 +75,13 @@ module.exports = {
                         gifyslap = "https://i.giphy.com/media/MlMl5tEnohzZm/source.gif";
                         break;
 
-
                 }
 
-
-
+                
                 const embed = new Discord.MessageEmbed()
                     .setTitle(message.author.username + " slaped " + target.username)
                     .setImage(gifyslap)
                 message.channel.send(embed);
-                    
-
 
             }
 
