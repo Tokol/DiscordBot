@@ -11,7 +11,7 @@ module.exports = {
  var books = [];
 
  books[0]="1. The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt"+"\n";
- books[1]="2. Thinking Fast and Slow by Politics and Religion by Daniel Kahneman"+"\n";
+ books[1]="2. Thinking Fast and Slow by Daniel Kahneman"+"\n";
  books[2]="3. Bad Science by Ben Goldacre"+"\n";
  books[3]="4. Meditations by Marcus Aurelius"+"\n";
  books[4]="5. The Design of Everyday Things by Don Norman"+"\n";
