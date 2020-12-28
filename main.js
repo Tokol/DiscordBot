@@ -246,5 +246,6 @@ else if (command==="unmute"){
 });
 
 
-//client.login(process.env.DISCORD_TOKEN);
-client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.o_Q-SDOP-5roDHtmt6zWh2SrSss');
+client.login(process.env.DISCORD_TOKEN);
+
+
