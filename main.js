@@ -182,24 +182,24 @@ else if (command==="unmute"){
 }
 
 
-        else if(command=="av?"){
+        else if(command==="av?"){
 
                 client.commands.get('avatar').execute(message,args);
 
         }
 
-        else if(command=="cat"){
+        else if(command==="cat"){
             client.commands.get('cat').execute(message,args);
         }
-        else if (command=="dog"){
+        else if (command==="dog"){
             client.commands.get('dog').execute(message,args);
         }
                 
-        else if(command=="suicide"){
+        else if(command==="suicide"){
             client.commands.get('suicide').execute(message,args);
         }
 
-        else if (command=="code"){
+        else if (command==="code"){
             client.commands.get('code').execute(message,args);
         }
 
@@ -223,10 +223,10 @@ else if (command==="unmute"){
         }
 
 
-            else if(command=="flirt"){
+            else if(command==="flirt"){
 
 
-            if(message.author.username=="Kafka"){
+            if(message.author.username==="Kafka"){
                 client.commands.get('flirt').execute(message, args);
             }
     
@@ -239,7 +239,7 @@ else if (command==="unmute"){
 
 
 
-        if(command=="kill"){
+        if(command==="kill"){
             client.commands.get('kill').execute(message, args);
         }
 
