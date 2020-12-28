@@ -42,7 +42,7 @@ module.exports = {
 
 
                     case 4:
-                        gifyslap = "https://i.giphy.com/media/cOnZnwqcXNv6Oi429P/source.mov";
+                        gifyslap = "https://i.giphy.com/media/cOnZnwqcXNv6Oi429P/giphy.gif";
                         break;
 
 
