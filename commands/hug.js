@@ -88,7 +88,7 @@ module.exports = {
 
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + " Hugs " + target.username)
+                    .setTitle(message.author.username + " Hugs " + target.username +"("+random+")")
                     .setImage(gifyhug)
                 message.channel.send(embed);
                     
