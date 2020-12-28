@@ -75,7 +75,7 @@ module.exports = {
                         break;
 
                     case 13:
-                        gifykill = "https://i.giphy.com/media/9umH7yTO8gLYY/source.gif";
+                        gifykill = "https://i.giphy.com/media/JzsG0EmHY9eKc/source.gif";
                         break;
 
 
@@ -88,7 +88,7 @@ module.exports = {
 
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + " Hugs " + target.username +"("+random+")")
+                    .setTitle(message.author.username + " Hugs " + target.username)
                     .setImage(gifyhug)
                 message.channel.send(embed);
                     
