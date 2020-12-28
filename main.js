@@ -115,6 +115,9 @@ else if(command=="apeksha?"){
     client.commands.get('apeksha').execute(message, args);
 }
 
+else if(command=="bipul?"){
+    client.commands.get('bipul').execute(message, args);
+}
 
 
 
@@ -128,6 +131,11 @@ else if (command==="clear"){
         }
 
 }
+
+else if(command==="book"){
+    client.commands.get('book').execute(message, args);
+}
+
 
 
 else if(command==="kick"){

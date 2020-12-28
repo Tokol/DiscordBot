@@ -43,22 +43,12 @@ var displayValue = "This is a latest Data Provided by Nepal Rastra Bank (NRB) \n
                         
 displayValue = displayValue+'\n'+currency+'('+ short_currency +') ' +'unit: '+unit +' buy: '+buy +' sell: '+sell+'\n';
 
-
-
-
-
-
                     }
 
-
-                    var embed = new Discord.MessageEmbed()
+var embed = new Discord.MessageEmbed()
 .setTitle('Exchange Rate')
-
 .setDescription(displayValue)
-
 message.channel.send(embed);
-
-
 
                 
             }
