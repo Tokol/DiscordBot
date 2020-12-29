@@ -23,7 +23,7 @@ module.exports = {
  books[10]="11. The Next 100 Years: A Forecast for the 21st Century by George Friedman"+"\n";
  
 
-
+ 
 var embed = new Discord.MessageEmbed()
 .setTitle('Must Read book')
 .setDescription('Must read books sugestion from Kafka AKA HAL 9000\n'+"\n"+books[0]+'\n'+books[1]+'\n'+books[2]+'\n'+books[3]+'\n'+books[4]+'\n'+books[5]+'\n'+books[6]+'\n'+books[7]+'\n'+books[8]+'\n'+books[9]+'\n'+books[10]+'\n');
