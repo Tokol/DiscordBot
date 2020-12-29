@@ -236,7 +236,6 @@ else if (command==="unmute"){
 
         }
 
-
         else if(command==="kill"){
             client.commands.get('kill').execute(message, args);
         }
@@ -245,18 +244,16 @@ else if (command==="unmute"){
             client.commands.get('slap').execute(message, args);
         }
 
-
         else if(command==="hug"){
             client.commands.get('hug').execute(message, args);
         }
-
-
 
         else if(command=="rashi"){
             client.commands.get('rashi').execute(message, args);
         }
 
 
+            
 
     else{
         message.channel.send( 'You need to enter a valid command!');

@@ -2,21 +2,39 @@
 const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
-const bgImage = "https://bgr.com/wp-content/uploads/2018/11/halll.png";
+const bgImage = "https://cdn.pixabay.com/photo/2016/06/14/10/58/guestbook-1456265_960_720.jpg";
 
 module.exports = {
     name: 'code',
     description: "This command view game code!",
      execute(message, args){
     
-   https://bgr.com/wp-content/uploads/2018/11/halll.png
-var img= 'https://textoverimage.moesif.com/image?image_url=https://science.sciencemag.org/content/sci/366/6472/1468.6/F1.large.jpg?width=800&height=600&carousel=1&text=Game ko Code '+args[0]+" Ho"+'&text_color=2912f6ff&text_size=128&y_align=middle&x_align=center';
+        if(!args[0]){
+            message.channel.send("Invalid Command");
+        }
+
+        else{
+
+            var img= 'https://textoverimage.moesif.com/image?image_url=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F06%2F14%2F10%2F58%2Fguestbook-1456265_960_720.jpg&text='+args[0].toUpperCase()+'&text_color=1a191eff&text_size=64&y_align=middle&x_align=center';
 
 
 
-console.log(bgImage);
-console.log(img);
-message.channel.send("Game ko code ", {files: [img]});
+console.log(img)
+
+const exampleEmbed = new Discord.MessageEmbed()
+.setColor('#00FF00	')
+    .setTitle('Game Invitation')
+    .setDescription(`I ${message.author.username} heartly invite every beautiful and free soul for a game.\nI also hearby acknowledge you that game will be cool and fun \nGame Code :`)
+	.setImage(img)
+	.setTimestamp()
+    .setFooter(`${'@among us '}`)        
+
+    message.channel.send(exampleEmbed);
+
+
+        }
+
+
 
 
         //    const embed = new Discord.MessageEmbed()
