@@ -20,7 +20,7 @@ module.exports = {
 const exampleEmbed = new Discord.MessageEmbed()
 .setColor('#00FF00	')
     .setTitle('Game Invitation')
-    .setDescription(`I ${message.author.username} heartly invite every beautiful and free soul for a game.\nI also hearby acknowledge you that game will be cool and fun \nGame Code :${args[0].toUpperCase()}`)
+    .setDescription(`I ${message.author.username} heartly invite every beautiful and free soul for a game.\nI also hearby acknowledge you that game will be cool and fun \nGame Code : ${args[0].toUpperCase()}`)
 	.setImage(img)
 	.setTimestamp()
     .setFooter(`${'@among us '}`)        
