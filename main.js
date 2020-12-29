@@ -252,6 +252,10 @@ else if (command==="unmute"){
 
 
 
+        else if(command=="rashi"){
+            client.commands.get('rashi').execute(message, args);
+        }
+
 
 
     else{
@@ -260,3 +264,5 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
+
+
