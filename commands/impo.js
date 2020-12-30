@@ -20,7 +20,8 @@ module.exports = {
 
 
             console.log(img);
-          
+            message.channel.send("3rd Imposter award!!", {files: [img]});
+
 
             const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#800000')
@@ -30,7 +31,7 @@ module.exports = {
                 .setImage(img)
                    
 
-    message.channel.send(exampleEmbed);
+    //message.channel.send(exampleEmbed);
 
 
         }
