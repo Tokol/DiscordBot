@@ -5,6 +5,7 @@ const ytdl = require('ytdl-core');
 
 const client = new Discord.Client();
 
+//const config = require('config');
 
 const prefix = '-hal ';
 
@@ -269,6 +270,5 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
-
 
 

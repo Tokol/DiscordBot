@@ -1,7 +1,6 @@
 
-const Discord = require('discord.js');
 const fetch = require('node-fetch');
-
+const { Discord, Client, MessageAttachment } = require('discord.js');
 const bgImage = "https://cdn.pixabay.com/photo/2016/06/14/10/58/guestbook-1456265_960_720.jpg";
 
 module.exports = {
@@ -20,24 +19,24 @@ module.exports = {
 
 
             console.log(img);
-            message.channel.send("3rd Imposter award!!", {files: [img]});
+           //await message.channel.send("3rd Imposter award!!", {files: [img]});
 
+           const attachment = new MessageAttachment(img);
+            message.channel.send(attachment);
 
-            const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('#800000')
-                .setTitle('3rd Imposter Award')
-                .setDescription('test')
-                //.setDescription(`I ${message.author.username} heartly invite every beautiful and free soul for a game.\nI also hearby acknowledge you that game will be cool and fun \nGame Code : ${args[0].toUpperCase()}`)
-                .setImage(img)
-                   
+                
+        //     const exampleEmbed = new Discord.MessageEmbed()
+        //     .setColor('#800000')
+        //         .setTitle('3rd Imposter Award')
+        //         .setDescription('test')
 
-    //message.channel.send(exampleEmbed);
+        //         .setImage(img)
+                
 
+        // }
+        // message.channel.send(exampleEmbed);
 
-        }
-
-
-
+                
 
         //    const embed = new Discord.MessageEmbed()
         //     .setTitle('Game Code')
@@ -63,4 +62,6 @@ module.exports = {
            // message.channel.send("User has been banned");
         
     }
+}
+
 }
