@@ -258,7 +258,7 @@ else if (command==="unmute"){
         }
 
         else if (command==="aakash?" || command==="aakash" ){
-            client.command.get('akash').execute(message,args);
+            client.commands.get('akash').execute(message,args);
         }  
         
 
@@ -269,7 +269,6 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
-
 
 
 
