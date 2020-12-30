@@ -78,7 +78,7 @@ else if(command==='napper?'){
 }
 
 
-else if(command==="ray10?"){
+else if(command==="ray10?" || command==="ray?"){
     client.commands.get('ray').execute(message, args);
 }
 
@@ -253,7 +253,15 @@ else if (command==="unmute"){
         }
 
 
-            
+        else if(command==="imp"){
+            client.commands.get('impo').execute(message, args);
+        }
+
+        else if (command==="aakash?" || command==="aakash" ){
+            client.command.get('akash').execute(message,args);
+        }  
+        
+
 
     else{
         message.channel.send( 'You need to enter a valid command!');
@@ -261,5 +269,7 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
+
+//client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.0r4-bOIFAGdX36bMmEcnPfOiVVw');
 
 
