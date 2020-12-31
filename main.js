@@ -262,6 +262,9 @@ else if (command==="unmute"){
             client.commands.get('akash').execute(message,args);
         }  
         
+        else if(command=="year"){
+            client.commands.get('newyear').execute(message,args);
+        }
 
 
     else{
