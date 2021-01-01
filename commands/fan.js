@@ -68,7 +68,7 @@ module.exports = {
 
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + "is a fan of" + target.username)
+                    .setTitle(message.author.username + " is a fan of " + target.username)
                     .setImage(gifykill)
                 message.channel.send(embed);
                     
