@@ -266,6 +266,10 @@ else if (command==="unmute"){
             client.commands.get('newyear').execute(message,args);
         }
 
+        else if (command==="fan"){
+            client.commands.get('fan').execute(message,args);
+        }
+
 
     else{
         message.channel.send( 'You need to enter a valid command!');
@@ -273,5 +277,3 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
-
-

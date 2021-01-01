@@ -15,9 +15,6 @@ module.exports = {
         else{
 
             var img= 'https://textoverimage.moesif.com/image?image_url=https%3A%2F%2Fpreview.redd.it%2Fer8mtzfwfop51.png%3Fwidth%3D1816%26format%3Dpng%26auto%3Dwebp%26s%3D7adf25628e631d805533b59d944dd13cab49714a&text=%20Number%201%20Imposter%20ko%20dalal%3A%20'+target.username+'%20&text_color=ea1616ff&text_size=64&margin=640';
-                
-
-
             console.log(img);
            //await message.channel.send("3rd Imposter award!!", {files: [img]});
 
