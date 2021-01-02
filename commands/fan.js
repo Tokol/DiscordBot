@@ -24,7 +24,7 @@ module.exports = {
                         break;
 
                     case 2:
-                        gifykill = "https://i.giphy.com/media/iql3feYAKaqftl4hP3/source.mp4";
+                        gifykill = "https://i.giphy.com/media/V0SDwIXMLFH3O/source.gif";
                         break;
 
                     case 3:
