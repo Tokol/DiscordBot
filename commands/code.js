@@ -15,7 +15,7 @@ module.exports = {
 
         else{
 
-            var img= 'https://textoverimage.moesif.com/image?image_url=https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-red-chinese-style-holiday-greeting-card-background-design-backgroundholiday-cardflower-branchxiangyunbackgroundpsd-image_75228.jpg&text='+args[0].toUpperCase()+'&text_color=1a191eff&text_size=64&y_align=middle&x_align=center';
+            var img= 'https://textoverimage.moesif.com/image?image_url=https://i.imgur.com/w2UGYNi.jpg&text='+args[0].toUpperCase()+'&text_color=1a191eff&text_size=64&y_align=middle&x_align=center';
                 
 const exampleEmbed = new Discord.MessageEmbed()
 .setColor('#00FF00	')
