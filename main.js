@@ -270,6 +270,11 @@ else if (command==="unmute"){
             client.commands.get('fan').execute(message,args);
         }
 
+        else if(command=="looney?"){
+
+            client.commands.get('looney').execute(message,args);
+        }
+
 
     else{
         message.channel.send( 'You need to enter a valid command!');
