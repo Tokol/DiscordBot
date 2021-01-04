@@ -12,6 +12,7 @@ const prefix = '-hal ';
 const fs = require('fs');
 
 const kafkaId = 319740211255050242;
+const tinyId = 678904236058214400;
 
 client.commands = new Discord.Collection();
 
@@ -123,7 +124,7 @@ else if(command=="bipul?"){
 
 
 else if (command==="clear"){
-    if(message.author.id==kafkaId){
+    if(message.author.id==kafkaId || message.author.id==tinyId){
         client.commands.get('clear').execute(message, args);
     }
 
@@ -131,6 +132,11 @@ else if (command==="clear"){
             message.channel.send('This command only work for Kafka');
         }
 
+}
+
+
+else if(command==="id"){
+    client.commands.get('getid').execute(message, args);
 }
 
 else if(command==="book" || command=="books"){
@@ -282,3 +288,5 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
+
+//
