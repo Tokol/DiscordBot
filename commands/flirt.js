@@ -95,10 +95,18 @@ module.exports = {
 
 
 
+            const tinyId = 678904236058214400;
+                    var targetUsername = "";
 
+                    if(message.author.id==tinyId){
+                        targetUsername = "kafka"      
+                    }
 
+                    else{
+                        targetUsername = target.username;
+                    }
 
-            message.channel.send("Hey! "+target.username+" "+flirtText);
+            message.channel.send("Hey! "+targetUsername+" "+flirtText);
 
 //            const memberTarget = message.guild.members.cache.get(target.id);
 
