@@ -236,9 +236,9 @@ else if (command==="unmute"){
             if(message.author.id==kafkaId || message.author.id==tinyId){
                 client.commands.get('flirt').execute(message, args);
             }
-                
+
             else{
-                message.channel.send('This command only work for Kafka');
+                message.channel.send('This command only work for Kafka and tiny');
             }
 
         }
