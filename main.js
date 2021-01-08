@@ -289,6 +289,4 @@ else if (command==="unmute"){
     }
 });
 
-//client.login(process.env.DISCORD_TOKEN);
-client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.XMiMR8rZBLmfDy6TMbaACXB2pZM');
-//NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.XMiMR8rZBLmfDy6TMbaACXB2pZM
+client.login(process.env.DISCORD_TOKEN);
