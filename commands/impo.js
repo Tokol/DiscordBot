@@ -6,7 +6,7 @@ const { Discord, Client, MessageAttachment } = require('discord.js');
 const FormData = require('form-data');
 //const imgflip =  require('imgflip');
 const { Imgflip } =  require ('imgflip.com');
-
+const kafkaId = 319740211255050242;
 module.exports = {
     name: 'impo',
     description: "This command provides imposter award!",
@@ -18,6 +18,15 @@ module.exports = {
 
         else{
             
+            var impostername = "";
+         if(target.id==kafkaId){
+          impostername = message.author.username
+         }
+
+         else{ i
+          mpostername = target.username;
+          
+         }
 
 var imgflip = new Imgflip();
 
@@ -31,7 +40,7 @@ imgflip.api
              boxes:[
                  
                 {
-                    "text": target.username,
+                    "text": impostername,
                     "x": 600,
                     "y": 775,
                     "width": 500,
