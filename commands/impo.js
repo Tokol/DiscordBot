@@ -16,18 +16,19 @@ module.exports = {
             message.channel.send("Invalid Command");
         }
 
+
+        
         else{
-            
-            var impostername = "";
+          var impostername = "";    
+           
          if(target.id==kafkaId){
           impostername = message.author.username
          }
 
-         else{ i
-          mpostername = target.username;
-          
-         }
+         else{ impostername = target.username;
 
+         }
+          
 var imgflip = new Imgflip();
 
         var imageShow = "";
