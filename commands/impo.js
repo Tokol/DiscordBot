@@ -19,15 +19,8 @@ module.exports = {
 
         
         else{
-          var impostername = "";    
-           
-         if(target.id==kafkaId){
-          impostername = message.author.username
-         }
-
-         else{ impostername = target.username;
-
-         }
+          var impostername = target.username;    
+        
           
 var imgflip = new Imgflip();
 
