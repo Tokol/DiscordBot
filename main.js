@@ -284,6 +284,10 @@ else if (command==="unmute"){
             client.commands.get('looney').execute(message,args);
         }
 
+        else if(command=="help"){
+            client.commands.get('help').execute(message, args);
+        }
+            
 
     else{
         message.channel.send( 'You need to enter a valid command!');
