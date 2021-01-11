@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
 
-
 module.exports = {
     name: 'help',
     description: "This command shows a help !",
@@ -12,8 +11,8 @@ module.exports = {
 
                         var embed = new Discord.MessageEmbed()
                         .setTitle('hal commands')
-                        .setDescription('slap\nkill\nhug\nweather\ncurrency\nfan\ncat\ndog\nrashi\nav?')
-                                        
+                        .setDescription('slap @mention\nkill @mention\nhug @mention\nweather cityname\ncurrency\nfan @mention\ncat\ndog\nrashi zodiac sign\nav? @mention')
+
                         message.channel.send(embed);
                     
 
@@ -30,4 +29,3 @@ module.exports = {
         
         
     }
-}

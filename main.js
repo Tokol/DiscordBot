@@ -287,12 +287,12 @@ else if (command==="unmute"){
         else if(command=="help"){
             client.commands.get('help').execute(message, args);
         }
-            
+
 
     else{
         message.channel.send( 'You need to enter a valid command!');
     }
 });
 
-client.login(process.env.DISCORD_TOKEN);
-
+//client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.NxmK6dx9WGcoW-yl9Gikmd42Dqo');
