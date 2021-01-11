@@ -13,6 +13,7 @@ const fs = require('fs');
 
 const kafkaId = 319740211255050242;
 const tinyId = 678904236058214400;
+const heavenId = 755696993694908416;
 
 client.commands = new Discord.Collection();
 
@@ -124,7 +125,7 @@ else if(command=="bipul?"){
 
 
 else if (command==="clear"){
-    if(message.author.id==kafkaId || message.author.id==tinyId){
+    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
         client.commands.get('clear').execute(message, args);
     }
 
@@ -233,12 +234,12 @@ else if (command==="unmute"){
             else if(command==="flirt"){
 
 
-            if(message.author.id==kafkaId || message.author.id==tinyId){
+            if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
                 client.commands.get('flirt').execute(message, args);
             }
 
             else{
-                message.channel.send('This command only work for Kafka and tiny');
+                message.channel.send('This command only work for Kafka,tiny and heaven');
             }
 
         }
@@ -290,3 +291,4 @@ else if (command==="unmute"){
 });
 
 client.login(process.env.DISCORD_TOKEN);
+
