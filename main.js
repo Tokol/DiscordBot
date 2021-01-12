@@ -196,6 +196,13 @@ else if (command==="unmute"){
 
         }
 
+
+        else if(command==="kiss"){
+
+            client.commands.get('kiss').execute(message,args);
+
+    }
+
         else if(command==="cat"){
             client.commands.get('cat').execute(message,args);
         }
