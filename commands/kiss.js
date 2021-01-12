@@ -98,7 +98,7 @@ module.exports = {
 
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + " kill " + target.username)
+                    .setTitle(message.author.username + " kissed " + target.username)
                     .setImage(kisskill)
                 message.channel.send(embed);
                     

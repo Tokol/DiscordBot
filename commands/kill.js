@@ -98,7 +98,7 @@ module.exports = {
 
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + " kissed " + target.username)
+                    .setTitle(message.author.username + " killed " + target.username)
                     .setImage(gifykill)
                 message.channel.send(embed);
                     
