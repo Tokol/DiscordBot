@@ -291,6 +291,13 @@ else if (command==="unmute"){
             client.commands.get('looney').execute(message,args);
         }
 
+
+        else if(command=="!bigyanyo?"){
+
+            client.commands.get('bigyanyo').execute(message,args);
+        }
+
+
         else if(command=="help"){
             client.commands.get('help').execute(message, args);
         }
