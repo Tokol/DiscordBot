@@ -298,6 +298,13 @@ else if (command==="unmute"){
         }
 
 
+        else if(command=="greet"){
+
+            client.commands.get('greet').execute(message,args);
+        }
+
+
+
         else if(command=="help"){
             client.commands.get('help').execute(message, args);
         }
