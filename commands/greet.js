@@ -9,7 +9,7 @@ module.exports = {
         const target = message.mentions.users.first();
         if (target) {
 
-
+                    
   
 
                 var random = Math.floor(Math.random() * 10) + 1

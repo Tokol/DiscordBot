@@ -15,7 +15,7 @@ module.exports = {
                     break;
        
                     case 2:
-                        morningText = "Draft the plan of your course of action, and you will be unstoppable. Good Morning, Rangers!";
+                        morningText = "Draft the plan of your course of action, and you will be unstoppable. Good Morning, server mate!";
                        break;
        
        
@@ -33,19 +33,19 @@ module.exports = {
                                break;
 
                                case 6:
-                                morningText = "Sunrises are beautiful just like you all guys; I wish to start my beautiful day sitting beside you. Good morning Rangers, hope you have a wonderful day!";
+                                morningText = "Sunrises are beautiful just like you all guys; I wish to start my beautiful day sitting beside you. Good morning server mater, hope you have a wonderful day!";
                                break;
 
 
 
                                case 7:
-                                morningText = "Good morning rangers, hope when you open your eyes you read this, I wish your day goes as planned and more than amazing! Wake up rangers!";
+                                morningText = "Good morning server mater, hope when you open your eyes you read this, I wish your day goes as planned and more than amazing! Wake up server mate!";
                                 break;
 
 
 
                                 case 8:
-                                    morningText = "Good morning Rangers, to wake up with you guys is the best part of the morning, I love you rangers!";
+                                    morningText = "Good morning server mate, to wake up with you guys is the best part of the morning, I love you server mater!";
                                     break;
 
 
