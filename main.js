@@ -14,6 +14,7 @@ const fs = require('fs');
 const kafkaId = 319740211255050242;
 const tinyId = 678904236058214400;
 const heavenId = 755696993694908416;
+const anjalId = 479573206911680512;
 
 client.commands = new Discord.Collection();
 
@@ -125,10 +126,10 @@ else if(command=="bipul?"){
 
 
 else if (command==="clear"){
-    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
+    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId || message.author.id==anjalId){
         client.commands.get('clear').execute(message, args);
     }
-
+        
         else {
             message.channel.send('This command only work for Kafka');
         }
