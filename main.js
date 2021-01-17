@@ -126,10 +126,10 @@ else if(command=="bipul?"){
 
 
 else if (command==="clear"){
-    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId || message.author.id==anjalId){
+    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
         client.commands.get('clear').execute(message, args);
     }
-        
+
         else {
             message.channel.send('This command only work for Kafka');
         }
