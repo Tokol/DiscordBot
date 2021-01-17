@@ -6,11 +6,10 @@ module.exports = {
     description: "This command is get meme!",
     async  execute(message, args){
 
-        print(args[1]);
-        
+        jokesurl = "";
         var response;
         if(!args[0]){
-            jokesurl = "";
+           
             var random =   Math.floor(Math.random() * 3) + 1  
             switch(random){
                 case 1:
@@ -32,7 +31,8 @@ module.exports = {
         }
 
 
-        else if (args[1]==18){
+        else if (args[0]==18){
+               
 
             jokesurl = "https://meme-api.herokuapp.com/gimme/PornoMemes";
         }
