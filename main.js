@@ -160,6 +160,12 @@ else if(command==="kick"){
 }
 
 
+else if(command=="Lollipop?" || command=="lollipop?"){
+    client.commands.get('lolipop').execute(message, args);  
+}
+
+        
+
 else if(command==="ban"){
     if(message.author.id==kafkaId){
         client.commands.get('ban').execute(message, args);

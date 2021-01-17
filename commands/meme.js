@@ -8,19 +8,21 @@ module.exports = {
 
             var random =   Math.floor(Math.random() * 1) + 1  
 
-        
        
                 jokesurl = "";
        
             switch(random){
                 case 1:
-                    jokesurl = "https://meme-api.herokuapp.com/gimme";
+                    jokesurl = "https://meme-api.herokuapp.com/gimme/NepaliMeme";
                     break;
        
                     case 2:
                         jokesurl = "https://meme-api.herokuapp.com/gimme/wholesomememes";
                        break;
                             
+                     case 3: 
+                     jokesurl = "https://meme-api.herokuapp.com/gimme/";
+
                     default:
                         jokesurl = "https://meme-api.herokuapp.com/gimme";
        
