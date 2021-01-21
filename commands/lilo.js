@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 module.exports = {
-    name: 'lolipop',
-    description: "this is a lolipop command",
+    name: 'lilo',
+    description: "this is a lilo command",
     execute(message, args){
 
         const embed = new Discord.MessageEmbed()
-        .setTitle('Lollipop69 Intro')
-        .setDescription('Hi my name is Lollipop. Come say hi to me in Kuirey ko kafe ')
-        .addField("join here [link](https://discord.gg/YPtyFe3H7R)")
-
+        .setTitle('Lilo Intro')
+        .setDescription('Hi! My name is Lilo. Find me my Stitch please. <33 ')
+        .addField("come meet me here (https://discord.gg/YPtyFe3H7R)")
+            
         message.channel.send(embed);
 
 

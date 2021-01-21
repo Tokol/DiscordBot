@@ -166,6 +166,10 @@ else if(command=="Lollipop?" || command=="lollipop?"){
 }
 
 
+else if(command=="lilo?" || command=="Lilo?"){
+    client.commands.get('lolipop').execute(message, args);  
+}
+        
 
 else if(command==="ban"){
     if(message.author.id==kafkaId){
