@@ -67,11 +67,11 @@ client.on('message', message =>{
     // }
 
 
-else if(command==='kafka?'){
+else if(command==='kafka?' || command==='kafka'){
     client.commands.get('kafka').execute(message, args);
 }
 
-
+    
 
 else if(command==='saurav?'){
     client.commands.get('saurav').execute(message, args);
