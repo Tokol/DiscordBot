@@ -170,6 +170,10 @@ else if(command==="lilo?" || command==="Lilo?"){
     client.commands.get('lilo').execute(message, args);  
 }
 
+else if(command==="money" || command==="Money"){
+    client.commands.get('money').execute(message, args);  
+}
+
 
 else if(command==="ban"){
     if(message.author.id==kafkaId){
