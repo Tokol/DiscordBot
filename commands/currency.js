@@ -1,11 +1,11 @@
-const fetch = require('node-fetch');	const fetch = require('node-fetch');
-const Discord = require('discord.js');	const Discord = require('discord.js');
+const fetch = require('node-fetch');	
+const Discord = require('discord.js');	
 
 
 	module.exports = {
  	    name: 'currency',
       description: "This command shows a currency!",
-       execute(message, args){
+     async  execute(message, args){
         let date_ob = new Date();	
         let date = ("0" + date_ob.getDate()).slice(-2);	
         let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);	
