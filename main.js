@@ -71,7 +71,7 @@ else if(command==='kafka?' || command==='kafka'){
     client.commands.get('kafka').execute(message, args);
 }
 
-    
+
 
 else if(command==='saurav?'){
     client.commands.get('saurav').execute(message, args);
@@ -249,10 +249,10 @@ else if (command==="unmute"){
 
 
         else if(command==="currency"){
-            client.commands.get('money').execute(message,args);
+            client.commands.get('currency').execute(message,args);
         }
 
-
+            
             else if(command==="flirt"){
 
 
