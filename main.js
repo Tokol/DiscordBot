@@ -136,6 +136,10 @@ else if (command==="clear"){
 
 }
 
+else if(command==="die"|| command==="death"){
+    client.commands.get('death').execute(message, args);
+}
+
 
 else if(command==="id"){
     client.commands.get('getid').execute(message, args);
