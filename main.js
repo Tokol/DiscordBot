@@ -7,7 +7,8 @@ const client = new Discord.Client();
 
 //const config = require('config');
 
-const prefix = '-hal ';
+var prefix = 'hal ';
+
 
 const fs = require('fs');
 
@@ -17,6 +18,14 @@ const heavenId = 755696993694908416;
 const anjalId = 479573206911680512;
 
 client.commands = new Discord.Collection();
+
+String.prototype.equalIgnoreCase = function(str) {
+    return (str != null &&
+      typeof str === 'string' &&
+      this.toUpperCase() === str.toUpperCase());
+  }
+
+  
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -30,13 +39,26 @@ client.once('ready', () => {
     console.log('HAL 9000 is online!');
 });
 
+
+
 client.on('message', message =>{
 
+        var totalWord = message.content;
+        var firstWord = totalWord.replace(/ .*/, '');
+        var ignoreCaseFirstWord = firstWord.toLowerCase();
+        var commandWord = "";
+    if(firstWord.startsWith("-")){
+         commandWord = firstWord.slice(1,firstWord.length);
 
+        if(commandWord.toLowerCase()=='hal'){
+            ignoreCaseFirstWord = prefix;
+        } 
 
-   // const serverQueue = queue.get(message.guild.id);
+    }
 
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+  
+      
+    if(!ignoreCaseFirstWord==prefix || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
@@ -126,12 +148,12 @@ else if(command=="bipul?"){
 
 
 else if (command==="clear"){
-    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
+    if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId || message.member.hasPermission('ADMINISTRATOR')){
         client.commands.get('clear').execute(message, args);
     }
 
         else {
-            message.channel.send('This command only work for Kafka');
+            message.channel.send('This command only work for Kafka or admin of server');
         }
 
 }
@@ -190,17 +212,17 @@ else if(command==="ban"){
 
 
 else if (command==="mute"){
-    if(message.author.id==kafkaId){
+    if(message.author.id==kafkaId || message.member.hasPermission('ADMINISTRATOR')){
         client.commands.get('mute').execute(message, args);
     }              
         else {
-            message.channel.send('This command only work for Kafka');
+            message.channel.send('This command only work for Kafka or admin of server');
         }
 }
 
 
 else if (command==="unmute"){
-    if(message.author.id==kafkaId){
+    if(message.author.id==kafkaId || message.member.hasPermission('ADMINISTRATOR')){
         client.commands.get('unmute').execute(message, args);
     }              
         else {
@@ -333,9 +355,7 @@ else if (command==="unmute"){
         }
 
 
-    else{
-        message.channel.send( 'You need to enter a valid command!');
-    }
+   
 });
 
 client.login(process.env.DISCORD_TOKEN);
