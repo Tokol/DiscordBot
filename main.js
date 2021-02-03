@@ -95,9 +95,9 @@ else if(command==='kafka?' || command==='kafka'){
 
 
 
-else if(command==='saurav?'){
-    client.commands.get('saurav').execute(message, args);
-}
+// else if(command==='saurav?'){
+//     client.commands.get('saurav').execute(message, args);
+// }
 
 else if(command==='napper?'){
     client.commands.get('napper').execute(message, args);
@@ -122,9 +122,9 @@ else if(command==="lakpa?"){
 }
 
 
-else if(command==="shreya?"){
-    client.commands.get('shreya').execute(message, args);
-}
+// else if(command==="shreya?"){
+//     client.commands.get('shreya').execute(message, args);
+// }
 
 
 else if(command=="choila?"){
