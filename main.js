@@ -131,6 +131,11 @@ else if(command=="choila?"){
     client.commands.get('choila').execute(message, args);
 }
 
+else if(command=="krish??"){
+    client.commands.get('krish').execute(message, args);
+}
+    
+
 
 else if(command=="comrade?"){
     client.commands.get('comrade').execute(message, args);
