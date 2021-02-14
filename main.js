@@ -9,6 +9,7 @@ const client = new Discord.Client();
 
 var prefix = 'hal ';
 
+const DisTube = require('distube')
 
 const fs = require('fs');
 
@@ -37,9 +38,29 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('HAL 9000 is online!');
+   // 'PLAYING' | 'STREAMING' | 'LISTENING' | 'WATCHING' | 'CUSTOM_STATUS' | 'COMPETING';
+    client.user.setPresence({
+        status: 'online',
+        activity: {
+            name: 'Life is not a race, its a journey. Let\'s ride this jindgai ko gadi together',
+            type: 'PLAYING',
+            
+        }
+    })
+    
+    
 });
 
 
+client.distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
+
+client.distube
+    .on("playSong", (message, queue, song) => message.channel.send(
+        `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
+	))
+	.on("addSong", (message, queue, song) => message.channel.send(
+        `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
+    ))
 
 client.on('message', message =>{
 
@@ -236,7 +257,7 @@ else if (command==="unmute"){
 }
 
 
-        else if(command==="av?"){
+        else if(command==="av"){
 
                 client.commands.get('avatar').execute(message,args);
 
@@ -330,6 +351,10 @@ else if (command==="unmute"){
 
         else if (command==="fan"){
             client.commands.get('fan').execute(message,args);
+
+
+            
+
         }
 
         else if(command=="looney?"){
@@ -359,10 +384,48 @@ else if (command==="unmute"){
             client.commands.get('meme').execute(message, args);
         }
 
+        else if(command=="play"){
+            client.distube.play(message, args.join(" "));
+        }
+
+        if (command == "stop") {
+            client.distube.stop(message);
+            message.channel.send(`Stopped the music! by ${message.author}`);
+        }
+
+        else if (command=="loop"){
+            client.distube.setRepeatMode(message, parseInt(args[0]));
+            message.channel.send(`song is on loop! looped by ${message.author}`)
+        }
+
+        if (command == "skip"){
+            client.distube.skip(message);
+        }
+
+        if (command == "queue"){
+            let queue = client.distube.getQueue(message);
+            message.channel.send('Current queue:\n' + queue.songs.map((song, id) =>
+            `**${id + 1}**. ${song.name} - \`${song.formattedDuration}\``
+        ).slice(0, 10).join("\n"));
+
+        }
+       
+            
+        else if(command=="leave"){
+            client.commands.get('leave').execute(message,args);
+
+        }
+
+        else if(command=="say"){
+            client.commands.get('say').execute(message,args);
+        }
+
+
 
    
 });
 
-client.login(process.env.DISCORD_TOKEN);
 
+
+client.login(process.env.DISCORD_TOKEN);
 
