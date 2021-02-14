@@ -13,7 +13,7 @@ module.exports = {
                     break;
        
                     case 2:
-                        nightText = "I know it’s not true, but my heart still believes that the moon shines for just me and U Rangers. Good night.";
+                        nightText = "I know it’s not true, but my heart still believes that the moon shines for just me and server mates. Good night.";
                        break;
        
        
@@ -31,7 +31,7 @@ module.exports = {
                                break;
 
                                case 6:
-                                nightText = "We are together for a very long time now, and I just wanna let you all know that I love you all more than ever now. Good Night my Rangers.";
+                                nightText = "We are together for a very long time now, and I just wanna let you all know that I love you all more than ever now. Good Night my server mates.";
                                break;
 
 
