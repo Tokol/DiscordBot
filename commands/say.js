@@ -18,7 +18,7 @@ module.exports = {
 
 
             const timestamp = new Date().getTime();
-            const soundPath = `${__dirname}/halvoice.wav`;
+            const soundPath = `${__dirname}/files/halvoice.wav`;
         
 
             var  argsTotal="";
