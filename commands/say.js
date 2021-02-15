@@ -41,9 +41,7 @@ module.exports = {
                                       name: `${message.author.id}.mp3`
                                     }]
                                   })
-                                
-
-                                
+                                                                
                                 const voiceChannel = message.member.voice.channel;
                                 voiceChannel.join().then((connection) => {
 
