@@ -385,6 +385,16 @@ else if (command==="unmute"){
         }
 
         else if(command=="play"){
+            try{
+                client.distube.play(message, args.join(" "));
+           
+            }
+
+            catch(e){
+                print(e);
+               // client.commands.get('leave').execute(message,args);
+                
+            }
             client.distube.play(message, args.join(" "));
         }
 
