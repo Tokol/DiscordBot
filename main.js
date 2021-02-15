@@ -389,27 +389,54 @@ else if (command==="unmute"){
         }
 
         if (command == "stop") {
-            if(client.distube!=null){
+
+            try{
                 client.distube.stop(message);
-                message.channel.send(`Stopped the music! by ${message.author}`);
+            message.channel.send(`Stopped the music! by ${message.author}`);
+            }
+
+            catch(e){
+                client.commands.get('leave').execute(message,args);
+                
+            }
+
+        }
+
+        else if (command=="loop"){
+            try{
+                client.distube.setRepeatMode(message, parseInt(args[0]));
+            message.channel.send(`song is on loop! looped by ${message.author}`)
+            }
+
+            catch(e){
+                message.channel.send(`invalid request!! currenlty no music played! req by ${message.author}`);
             }
             
         }
 
-        else if (command=="loop"){
-            client.distube.setRepeatMode(message, parseInt(args[0]));
-            message.channel.send(`song is on loop! looped by ${message.author}`)
-        }
-
         if (command == "skip"){
-            client.distube.skip(message);
+            try{
+                client.distube.skip(message);
+            }
+
+            catch(e){
+                message.channel.send(`invalid request!! currenlty no music played! req by ${message.author}`);
+            }
+           
         }
 
         if (command == "queue"){
-            let queue = client.distube.getQueue(message);
-            message.channel.send('Current queue:\n' + queue.songs.map((song, id) =>
-            `**${id + 1}**. ${song.name} - \`${song.formattedDuration}\``
-        ).slice(0, 10).join("\n"));
+            
+            try{
+                let queue = client.distube.getQueue(message);
+                message.channel.send('Current queue:\n' + queue.songs.map((song, id) =>
+                `**${id + 1}**. ${song.name} - \`${song.formattedDuration}\``
+            ).slice(0, 10).join("\n"));
+            }
+
+            catch(e){
+                message.channel.send(`invalid request!! currenlty no music played! req by ${message.author}`);
+            }
 
         }
        
