@@ -405,7 +405,7 @@ else if (command==="unmute"){
                // client.commands.get('leave').execute(message,args);
                 
             }
-            client.distube.play(message, args.join(" "));
+            
         }
 
         if (command == "stop") {
