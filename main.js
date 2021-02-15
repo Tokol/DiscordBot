@@ -447,7 +447,7 @@ else if (command==="unmute"){
         }
 
         else if(command=="say"){
-            client.commands.get('say').execute(message,args);
+            //client.commands.get('say').execute(message,args);
         }
 
 
