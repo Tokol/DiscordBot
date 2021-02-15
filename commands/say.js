@@ -18,8 +18,8 @@ module.exports = {
 
 
             const timestamp = new Date().getTime();
-            const soundPath = `${__dirname}commands/files/halvoice.wav`;
-        
+            const soundPath = `${__dirname}/files/halvoice.wav`;
+            
 
             var  argsTotal="";
                     for ( i=0; i<args.length; i++){
@@ -35,11 +35,19 @@ module.exports = {
         
                             else{
                                 
+                                message.channel.send({
+                                    files: [{
+                                      attachment: `${soundPath}`,
+                                      name: `${message.author.id}.mp3`
+                                    }]
+                                  })
+                                
+
+                                
                                 const voiceChannel = message.member.voice.channel;
                                 voiceChannel.join().then((connection) => {
 
                                    
-
                                     connection.play(soundPath).on('end', () => {
                                         console.log('finished');
                                         connection.disconnect();
