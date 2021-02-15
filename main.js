@@ -43,7 +43,7 @@ client.once('ready', () => {
         status: 'online',
         activity: {
             name: 'Life is not a race, its a journey. Let\'s ride this jindgai ko gadi together',
-            type: 'CUSTOM_STATUS',
+            type: 'PLAYING',
             
         }
     })
