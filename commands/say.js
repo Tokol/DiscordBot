@@ -29,17 +29,13 @@ module.exports = {
                     
                     const voiceChannel = message.member.voice.channel;
                     voiceChannel.join().then((connetion)=>{
-                        message.channel.send(argsTotal, {
-                            tts: true,
-                            
-                           });
-
-                        // say.speak(argsTotal, 'Victoria', 1, null, function(err){
-                        //     if (err) {
-                        //         return console.error(err);
-                        //       }
+                       
+                        say.speak(argsTotal, 'Victoria', 1, null, function(err){
+                            if (err) {
+                                return console.error(err);
+                              }
                         
-                        // });
+                        });
                             
                     });
 
