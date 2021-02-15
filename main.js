@@ -386,12 +386,21 @@ else if (command==="unmute"){
 
         else if(command=="play"){
             try{
+
+                const voiceChannel = message.member.voice.channel;
+
+                if (!voiceChannel) return message.channel.send('You need to be in a channel to execute this command!');
+
                 client.distube.play(message, args.join(" "));
+ 
+                //         if (!voiceChannel) return message.channel.send('You need to be in a channel to execute this command!');
+
+        
            
             }
 
             catch(e){
-                
+
                 console.log(e);
                // client.commands.get('leave').execute(message,args);
                 
