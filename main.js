@@ -391,7 +391,8 @@ else if (command==="unmute"){
             }
 
             catch(e){
-                print(e);
+                
+                console.log(e);
                // client.commands.get('leave').execute(message,args);
                 
             }
