@@ -389,8 +389,11 @@ else if (command==="unmute"){
         }
 
         if (command == "stop") {
-            client.distube.stop(message);
-            message.channel.send(`Stopped the music! by ${message.author}`);
+            if(client.distube!=null){
+                client.distube.stop(message);
+                message.channel.send(`Stopped the music! by ${message.author}`);
+            }
+            
         }
 
         else if (command=="loop"){

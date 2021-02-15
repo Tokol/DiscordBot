@@ -27,42 +27,53 @@ module.exports = {
                     }
         
                     
-
-                        say.export(argsTotal, 'Victoria', 1, 'soundPath.wav', (err) => {
+                    const voiceChannel = message.member.voice.channel;
+                    voiceChannel.join().then((connetion)=>{
+                        say.speak(argsTotal, 'Victoria', 1, null, function(err){
                             if (err) {
-                              return console.error(err)
-                            }
+                                return console.error(err);
+                              }
+                        
+                        });
+                            
+                    });
+
+
+                        // say.export(argsTotal, 'Victoria', 1, 'soundPath.wav', (err) => {
+                        //     if (err) {
+                        //       return console.error(err)
+                        //     }
         
-                            else{
+                        //     else{
                                 
-                                // message.channel.send({
-                                //     files: [{
-                                //       attachment: `${say.soundPath}`,
-                                //       name: `${message.author.id}.mp3`
-                                //     }]
-                                //   })
+                        //         // message.channel.send({
+                        //         //     files: [{
+                        //         //       attachment: `${say.soundPath}`,
+                        //         //       name: `${message.author.id}.mp3`
+                        //         //     }]
+                        //         //   })
                                                                 
-                                const voiceChannel = message.member.voice.channel;
-                                voiceChannel.join().then((connection) => {
+                        //         const voiceChannel = message.member.voice.channel;
+                        //         voiceChannel.join().then((connection) => {
 
                                    
-                                    connection.play(soundPath).on('end', () => {
-                                        console.log('finished');
-                                        connection.disconnect();
+                        //             connection.play(soundPath).on('end', () => {
+                        //                 console.log('finished');
+                        //                 connection.disconnect();
         
-                                        FS.unlinkSync(soundPath);
-                                    }).on('error', (err) => {
-                                        console.error(err);
-                                        connection.disconnect();
-                                        FS.unlinkSync(soundPath);
-                                    });
-                                }).catch((err) => {
-                                    console.error(err);
-                                });
-                            }
+                        //                 FS.unlinkSync(soundPath);
+                        //             }).on('error', (err) => {
+                        //                 console.error(err);
+                        //                 connection.disconnect();
+                        //                 FS.unlinkSync(soundPath);
+                        //             });
+                        //         }).catch((err) => {
+                        //             console.error(err);
+                        //         });
+                        //     }
                           
         
-                          })
+                        //   })
 
 
         }
