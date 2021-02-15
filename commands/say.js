@@ -27,20 +27,20 @@ module.exports = {
                     }
         
                     
-        
-                        say.export(argsTotal, 'Victoria', 1, soundPath, (err) => {
+
+                        say.export(argsTotal, 'Victoria', 1, 'soundPath.wav', (err) => {
                             if (err) {
                               return console.error(err)
                             }
         
                             else{
                                 
-                                message.channel.send({
-                                    files: [{
-                                      attachment: `${soundPath}`,
-                                      name: `${message.author.id}.mp3`
-                                    }]
-                                  })
+                                // message.channel.send({
+                                //     files: [{
+                                //       attachment: `${say.soundPath}`,
+                                //       name: `${message.author.id}.mp3`
+                                //     }]
+                                //   })
                                                                 
                                 const voiceChannel = message.member.voice.channel;
                                 voiceChannel.join().then((connection) => {
