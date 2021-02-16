@@ -10,7 +10,7 @@ module.exports = {
         var coronaUrl = "";
         var covidNepal = "https://nepalcorona.info/api/v1/data/nepal";
 
-        var worldCovidURl = "https://api.covid19api.com/summary";
+        var worldCovidURl = "https://worldometers.p.rapidapi.com/api/coronavirus/country/";
 
             console.log(args[0]);
 
@@ -45,54 +45,38 @@ module.exports = {
 
         else{
             console.log('world update');
-                var findData = false;
+                
             coronaUrl = worldCovidURl;
             var  argsTotal="";
             for ( i=0; i<args.length; i++){
                 argsTotal = argsTotal+" "+args[i];
             }
 
-            await  fetch(worldCovidURl, {method: "GET",headers:{'X-Access-Token':'5cf9dfd5-3449-485e-b5ae-70a60e997864'}})
+
+            await  fetch(worldCovidURl+argsTotal.trim(), {method: "GET",headers:{'x-rapidapi-key':'757d02bda2msh9c9ccec72b99b9dp11907djsn658419b200ca'}})
             .then(res => res.json())
             .then(json => 
             response = json
             );
                 
-           
+         
 
 
-            if(response!=null){
+            if(!response.hasOwnProperty('Error')){
 
-
-                    for(i=0; i<response['Countries'].length; i++){
-
-                        console.log(response['Countries'][i]['Country'].toLowerCase());
-                         console.log(argsTotal.toLowerCase());
-
-                            if(response['Countries'][i]['Country'].toLowerCase()==argsTotal.toLowerCase().trim() ||  response['Countries'][i]['CountryCode'].toLowerCase()==argsTotal.toLowerCase().trim() ){
-
-                                findData = true;
-
-                                var value = response['Countries'][i];
-                                var momentDate = moment(response['Date'])
-                                var embed = new Discord.MessageEmbed()
-                                .setTitle(`Covid-19 Status of ${value['Country']}`)
-                                 .setDescription('🦠 Total Tested Positive : '+ value['TotalConfirmed']+'\n\n:muscle: Total Recovered : '+ value['TotalRecovered']+'\n\n😭 Total Deaths : '+ value['TotalDeaths'] +'\n\n😷 New Confirm Case : '+value['NewConfirmed']+'\n\n:muscle: New Recovered : '+ value['NewRecovered']+'\n\n😭  New Deaths : '+ value['NewDeaths']+'\n\n')
-                                 .setFooter(`Last Update at: ${momentDate.format("YYYY-MM-DD hh:mm:ss A")}`)   
-                                 message.channel.send(embed)  
-                                 return;
-
-                            }
-
-                    }
-
-                                if(findData==false){
-                                    var embed = new Discord.MessageEmbed()
-                                   .setTitle(`Covid-19 Status of ${argsTotal}`)
-                                      .setDescription('No data found. May be spelling mistake or requested country is not correct')
-                                             message.channel.send(embed);
-                                }
                 
+
+                                    var value = response['data']
+
+                                    //console.log('last_update');
+            
+                                //var momentDate = moment(response['last_update'])
+                                var embed = new Discord.MessageEmbed()
+                                .setTitle(`Covid-19 Status of ${response['data']['Country']}`)
+                                 .setDescription('🔬 Total Active Case : '+ value['Active Cases']+'\n\n🦠 Total Tested Positive : '+ value['Total Cases']+'\n\n:muscle: Total Recovered : '+ value['Total Recovered']+'\n\n😭 Total Deaths : '+ value['Total Deaths'] +'\n\n😷 New Confirm Case : '+value['New Cases']+'\n\n:muscle: New Recovered : '+ value['New Recovered']+'\n\n😭  New Deaths : '+ value['New Deaths']+'\n\n')
+                                 .setFooter(`Last Update at: ${response['last_update']}`)   
+                                 message.channel.send(embed)  
+                             
             }
 
             else{

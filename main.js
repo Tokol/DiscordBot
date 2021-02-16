@@ -450,7 +450,6 @@ else if (command==="unmute"){
         }
 
         if (command == "queue"){
-            
             try{
                 let queue = client.distube.getQueue(message);
                 message.channel.send('Current queue:\n' + queue.songs.map((song, id) =>
@@ -463,7 +462,10 @@ else if (command==="unmute"){
             }
 
         }
-       
+
+
+
+
             
         else if(command=="leave"){
             client.commands.get('leave').execute(message,args);
@@ -480,8 +482,8 @@ else if (command==="unmute"){
 });
 
 
-client.login(process.env.DISCORD_TOKEN);
-
+//client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.K_AQtrvOt7aNabbFxaD1eN-llS0');
 
 
 
