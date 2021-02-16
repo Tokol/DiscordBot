@@ -312,13 +312,13 @@ else if (command==="unmute"){
             else if(command==="flirt"){
 
 
-            if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
+            //if(message.author.id==kafkaId || message.author.id==tinyId || message.author.id==heavenId){
                 client.commands.get('flirt').execute(message, args);
-            }
+           // }
 
-            else{
-                message.channel.send('This command only work for Kafka,tiny and heaven');
-            }
+            // else{
+            //     message.channel.send('This command only work for Kafka,tiny and heaven');
+            // }
 
         }
 
