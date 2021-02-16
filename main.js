@@ -171,6 +171,10 @@ else if(command=="bipul?"){
     client.commands.get('bipul').execute(message, args);
 }
 
+else if(command=="covid"|| command=="corona"){
+    client.commands.get('covid').execute(message, args);
+}
+
 
 
 else if (command==="clear"){
@@ -476,7 +480,7 @@ else if (command==="unmute"){
 });
 
 
-client.login(process.env.DISCORD_TOKEN);
-
+//client.login(process.env.DISCORD_TOKEN);
+client.login('NzkxODk1MTc0NTA2MzQ4NTQ1.X-Vz2g.jfgm1BTE6QVJss2BVmCDhDxrdr4');
 
 
