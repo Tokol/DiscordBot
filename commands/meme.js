@@ -33,44 +33,42 @@ module.exports = {
 
         else if (args[0]==18){
                
-            var server = message.guild.id;
 
-            if(server==680462068004159564){
-
-            }
-
-            else{
-                jokesurl = "https://meme-api.herokuapp.com/gimme/PornoMemes";
-
-                await  fetch(jokesurl)
-                
-                .then(res => res.json())
-                .then(json => 
-                response = json
-                );
-    
-                        
-                        const embed = new Discord.MessageEmbed()
-                        .setTitle('Herera Haha gar!')
-                        .setDescription(response['title'])
-                        .setImage(response['preview'][response['preview'].length-1])
-                        message.channel.send(embed);
-
-            }
-           
-
-           
-
-
+            jokesurl = "https://meme-api.herokuapp.com/gimme/PornoMemes";
+            
         }
 
      
 
        
-               
+        var server = message.guild.id;
+
+        if(server==680462068004159564){
+
+            const embed = new Discord.MessageEmbed()
+            .setTitle('Oi Boka Yesto request yo server ma garna paudina')
+            .setImage('https://imgur.com/3Qzq7aO')
+            .setDescription('Mya Mya Mya ma boka ho')
+            message.channel.send(embed);
+        }
          
           
+            
+        else{
+                await  fetch(jokesurl)
+            
+            .then(res => res.json())
+            .then(json => 
+            response = json
+            );
 
+                    
+                    const embed = new Discord.MessageEmbed()
+                    .setTitle('Herera Haha gar!')
+                    .setDescription(response['title'])
+                    .setImage(response['preview'][response['preview'].length-1])
+                    message.channel.send(embed);
+        }
 
     }
 }
