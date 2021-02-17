@@ -43,7 +43,7 @@ module.exports = {
        
         var server = message.guild.id;
 
-        if(server==680462068004159564){
+        if(server==680462068004159564 && args[0]==18){
 
             const embed = new Discord.MessageEmbed()
             .setTitle('Oi Boka Yesto request yo server ma garna paudina')
