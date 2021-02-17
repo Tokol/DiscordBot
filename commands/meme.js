@@ -33,8 +33,35 @@ module.exports = {
 
         else if (args[0]==18){
                
+            var server = message.guild.id;
 
-            jokesurl = "https://meme-api.herokuapp.com/gimme/PornoMemes";
+            if(server==680462068004159564){
+
+            }
+
+            else{
+                jokesurl = "https://meme-api.herokuapp.com/gimme/PornoMemes";
+
+                await  fetch(jokesurl)
+                
+                .then(res => res.json())
+                .then(json => 
+                response = json
+                );
+    
+                        
+                        const embed = new Discord.MessageEmbed()
+                        .setTitle('Herera Haha gar!')
+                        .setDescription(response['title'])
+                        .setImage(response['preview'][response['preview'].length-1])
+                        message.channel.send(embed);
+
+            }
+           
+
+           
+
+
         }
 
      
@@ -44,19 +71,6 @@ module.exports = {
          
           
 
-            await  fetch(jokesurl)
-            
-            .then(res => res.json())
-            .then(json => 
-            response = json
-            );
-
-                    
-                    const embed = new Discord.MessageEmbed()
-                    .setTitle('Herera Haha gar!')
-                    .setDescription(response['title'])
-                    .setImage(response['preview'][response['preview'].length-1])
-                    message.channel.send(embed);
 
     }
 }
