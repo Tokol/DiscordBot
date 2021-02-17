@@ -47,7 +47,7 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
             .setTitle('Oi Boka Yesto request yo server ma garna paudina')
-            .setImage('https://imgur.com/3Qzq7aO')
+            .setImage('https://i.imgur.com/3Qzq7aO.png')
             .setDescription('Mya Mya Mya ma boka ho')
             message.channel.send(embed);
         }
