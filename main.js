@@ -474,11 +474,7 @@ else if (command==="unmute"){
              client.commands.get('stub').execute(message,args);
          }
 
-            // else if(command==""){
-            
-            // }
-
-
+         
         else if(command=="rec"){
            // client.commands.get('rec').execute(message,args);
         }
