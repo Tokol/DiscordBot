@@ -30,6 +30,7 @@ String.prototype.equalIgnoreCase = function(str) {
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
+
     const command = require(`./commands/${file}`);
 
     client.commands.set(command.name, command);
@@ -37,8 +38,9 @@ for(const file of commandFiles){
 
 
 client.once('ready', () => {
-    console.log('HAL 9000 is online!');
-   // 'PLAYING' | 'STREAMING' | 'LISTENING' | 'WATCHING' | 'CUSTOM_STATUS' | 'COMPETING';
+    
+   // const GUILD_ID = 'HIDDEN';
+   // console.log(client.guilds.cache.get('GUILD_ID'));
     client.user.setPresence({
         status: 'online',
         activity: {
@@ -47,9 +49,20 @@ client.once('ready', () => {
             
         }
     })
+
     
     
 });
+
+
+client.on('guildMemberAdd', (member)=>{
+    console.log('chriyo');
+    console.log(client.guilds.cache);
+    
+    //console.log(client.guilds.cache.get())    
+
+});
+
 
 
 client.distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
@@ -355,10 +368,6 @@ else if (command==="unmute"){
 
         else if (command==="fan"){
             client.commands.get('fan').execute(message,args);
-
-
-            
-
         }
 
         else if(command=="looney?"){
@@ -397,9 +406,7 @@ else if (command==="unmute"){
 
                 client.distube.play(message, args.join(" "));
  
-                //         if (!voiceChannel) return message.channel.send('You need to be in a channel to execute this command!');
-
-        
+         
            
             }
 
@@ -464,25 +471,34 @@ else if (command==="unmute"){
         }
 
 
+            // else if(command==""){
+            
+            // }
 
+
+        else if(command=="rec"){
+           // client.commands.get('rec').execute(message,args);
+        }
+
+         else if(command=="fin"){
+           // client.commands.get('fin').execute(message,args);
+         }   
 
             
         else if(command=="leave"){
             client.commands.get('leave').execute(message,args);
-
         }
 
         else if(command=="say"){
            // client.commands.get('say').execute(message,args);
         }
 
-
-
    
 });
 
-
 client.login(process.env.DISCORD_TOKEN);
+
+
 
 
 

@@ -32,19 +32,12 @@ module.exports = {
 
 
         else if (args[0]==18){
-               
-
             jokesurl = "https://meme-api.herokuapp.com/gimme/PornoMemes";
-            
         }
-
-     
 
        
         var server = message.guild.id;
-
         if(server==680462068004159564 && args[0]==18){
-
             const embed = new Discord.MessageEmbed()
             .setTitle('Oi Boka Yesto request yo server ma garna paudina')
             .setImage('https://i.imgur.com/3Qzq7aO.png')
