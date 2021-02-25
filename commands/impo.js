@@ -49,10 +49,7 @@ imgflip.api
             })
             .then(response => {
               //
-              
               imageShow = response['data']['url']
-
-
               const attachment = new MessageAttachment(imageShow);
               message.channel.send(attachment);
 

@@ -470,6 +470,9 @@ else if (command==="unmute"){
 
         }
 
+        else if(command=="stub"){
+             client.commands.get('stub').execute(message,args);
+         }
 
             // else if(command==""){
             
@@ -496,10 +499,8 @@ else if (command==="unmute"){
    
 });
 
+
 client.login(process.env.DISCORD_TOKEN);
-
-
-
 
 
 
