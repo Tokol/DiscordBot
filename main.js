@@ -456,6 +456,31 @@ else if (command==="unmute"){
            
         }
 
+
+        if (command == "pause"){
+            try{
+                client.distube.pause(message);
+            }
+
+            catch(e){
+                message.channel.send(`invalid request!! currenlty no music played! req by ${message.author}`);
+            }
+
+        }
+
+
+            if (command == "resume"){
+                try{
+                    client.distube.resume(message);
+                }
+    
+                catch(e){
+                    message.channel.send(`invalid request!! currenlty no music played! req by ${message.author}`);
+                }
+       
+        }
+
+
         if (command == "queue"){
             try{
                 let queue = client.distube.getQueue(message);
@@ -470,10 +495,15 @@ else if (command==="unmute"){
 
         }
 
+            else if(command=="hangman"){    
+            client.commands.get('hangman').execute(message,args);
+            }
+
+
         else if(command=="stub"){
              client.commands.get('stub').execute(message,args);
          }
-
+                
          
         else if(command=="rec"){
            // client.commands.get('rec').execute(message,args);
@@ -492,8 +522,13 @@ else if (command==="unmute"){
            // client.commands.get('say').execute(message,args);
         }
 
+        else if(command=="birthday"){
+                    
+        }
+
    
 });
+
 
 
 client.login(process.env.DISCORD_TOKEN);
