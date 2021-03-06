@@ -1,15 +1,15 @@
 
 const Discord = require('discord.js');
+const sinzoid = 792619465648635925;
 module.exports = {
     name: 'avatar',
     description: "This command view avatar a member!",
     execute(message, args){
         const target = message.mentions.users.first();
-        if(target){
-            //target.avatarURL;
 
-           // const memberTarget = message.guild.members.cache.get(target.id);
-            //memberTarget.get.
+            
+         if(target.id!=sinzoid){
+                
             const url = target.displayAvatarURL({ dynamic: true, size: 256});
 
             const embed = new Discord.MessageEmbed()
