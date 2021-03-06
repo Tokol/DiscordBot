@@ -18,6 +18,9 @@ module.exports = {
             channelID: channel.id,
             permission:'MANAGE_MESSAGES'
         })
+        await message.channel.messages.fetch({ limit: 1}).then(messages =>{
+            message.channel.bulkDelete(messages)
+    });
         hang.start();
     }
     // run : async(client, message, args) => {

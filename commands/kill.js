@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 
 const kafkaId = 319740211255050242;
+const yurieeID = 699525095101825036;
 module.exports = {
     name: 'kill',
     description: "This command to a member!",
@@ -15,6 +16,17 @@ module.exports = {
                 .setTitle('Kafka is a god')
                 .setDescription('Hey! '+ message.author.username+' You cannot kill a god')
             message.channel.send(embed);
+
+            }
+
+
+            else if(target.id==yurieeID){
+
+                const embed = new Discord.MessageEmbed()
+                .setTitle('she is a wife of kafka')
+                .setDescription('Hey! '+ message.author.username+' You cannot kill a god\'s wife')
+            message.channel.send(embed);
+
 
             }
 

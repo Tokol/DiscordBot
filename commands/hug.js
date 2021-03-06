@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 
 const kafkaId = 319740211255050242;
+const yurieeID = 699525095101825036;
 module.exports = {
     name: 'hug',
     description: "This command to hug a member!",
@@ -85,10 +86,17 @@ module.exports = {
 
                 }
 
+                var usnerame = "";
+                if(target.id==yurieeID){
+                    usnerame = "Kakfa"
+                }
 
+                else{
+                    usnerame = message.author.username;
+                }
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + " Hugs " + target.username)
+                    .setTitle(usnerame + " Hugs " + target.username)
                     .setImage(gifyhug)
                 message.channel.send(embed);
                     

@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 
 const kafkaId = 319740211255050242;
+const yurieeID = 699525095101825036;
 module.exports = {
     name: 'kiss',
     description: "This command to kiss a member!",
@@ -12,7 +13,7 @@ module.exports = {
 
            
 
-
+            
                     
          
 
@@ -96,9 +97,17 @@ module.exports = {
                 }
 
 
+                var usnerame = "";
+                        if(target.id==yurieeID){
+                            usnerame = "Kakfa"
+                        }
+
+                        else{
+                            usnerame = message.author.username;
+                        }
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(message.author.username + " kissed " + target.username)
+                    .setTitle(usnerame + " kissed " + target.username)
                     .setImage(kisskill)
                 message.channel.send(embed);
                     
