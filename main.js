@@ -78,6 +78,56 @@ client.distube
 
 client.on('message', message =>{
 
+  
+
+   var mentions = message.mentions.members.array();
+    
+   //console.log(target.length);
+
+   
+    var mentionKafka = false;
+    var mentionYuriee= false;
+
+   if(mentions.length>0){
+    for(var i=0; i<mentions.length; i++ ){
+
+        if(mentions[i]['user']['id']==kafkaId){
+            mentionKafka = true;
+        }
+     
+        if(mentions[i]['user']['id']==yurieeID){
+            mentionYuriee = true;
+        }
+
+    }
+    
+   }
+
+        if(mentionKafka){
+            message.react('👑'); 
+            message.react('👨‍💻');
+            message.react('🥇');
+            message.react('💖');
+            message.react('🔥');
+         
+        }
+
+        if(mentionYuriee){
+
+            message.react('😽');
+            
+            }
+
+   
+    
+    // if(target.id==kafkaId) {
+    
+    //     console.log('hello');
+
+    //     message.react('👍');
+      
+    // }
+
         var totalWord = message.content;
         var firstWord = totalWord.replace(/ .*/, '');
         var ignoreCaseFirstWord = firstWord.toLowerCase();
