@@ -39,9 +39,6 @@ for(const file of commandFiles){
 
 
 client.once('ready', () => {
-    
-   // const GUILD_ID = 'HIDDEN';
-   // console.log(client.guilds.cache.get('GUILD_ID'));
     client.user.setPresence({
         status: 'online',
         activity: {
@@ -103,7 +100,9 @@ client.on('message', message =>{
     
    }
 
-        if(mentionKafka){
+        
+
+        if(mentionKafka){        
             message.react('👑'); 
             message.react('👨‍💻');
             message.react('🥇');
@@ -578,6 +577,7 @@ else if (command==="unmute"){
 
 
 client.login(process.env.DISCORD_TOKEN);
+
 
 
 
