@@ -136,7 +136,7 @@ client.on('message', message =>{
 
             message.react('😽');
             if(authorPerson!= kafkaId && authorPerson!=yurieeID && authorPerson!=halId){
-                message.reply('\nThanks for mentioning my master kafka\'s wife.please let me know how can your bhauju help you?')
+                message.reply('\nThanks for mentioning my master kafka\'s wife. please let me know how can your bhauju help you?')
             }
         
             
