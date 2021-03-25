@@ -8,22 +8,23 @@ module.exports = {
         const target = message.mentions.users.first();
 
         var url;
+        var title;
             
                 if(target!=null){
                      url = target.displayAvatarURL({ dynamic: true, size: 256});
 
-               
+                     title = target.username;
                 }
 
 
                 else{
 
-                        url = message.author.avatarURL({dynamic: true, size: 256})
-
+                        url = message.author.displayAvatarURL({dynamic: true, size: 256})
+                        title =   message.author.username;
                 }
                 
                 const embed = new Discord.MessageEmbed()
-                .setTitle(target.username)
+                .setTitle(title)
                 .setDescription('Ko DP herera react gar')
                 .setImage(url)
     
