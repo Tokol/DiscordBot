@@ -7,22 +7,30 @@ module.exports = {
     execute(message, args){
         const target = message.mentions.users.first();
 
+        var url;
             
-         if(target.id!=sinzoid){
+                if(target!=null){
+                     url = target.displayAvatarURL({ dynamic: true, size: 256});
+
+               
+                }
+
+
+                else{
+
+                        url = message.author.avatarURL({dynamic: true, size: 256})
+
+                }
                 
-            const url = target.displayAvatarURL({ dynamic: true, size: 256});
-
-            const embed = new Discord.MessageEmbed()
-            .setTitle(target.username)
-            .setDescription('Ko DP herera react gar')
-            .setImage(url)
-
-            message.channel.send(embed);
+                const embed = new Discord.MessageEmbed()
+                .setTitle(target.username)
+                .setDescription('Ko DP herera react gar')
+                .setImage(url)
+    
+                message.channel.send(embed);
+           
 
            // message.channel.send("User has been banned");
-        }else{                               
-            message.channel.send("no user found");
-                
-        }
+        
     }
 }
