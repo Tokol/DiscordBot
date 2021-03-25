@@ -37,8 +37,10 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
+const guildId = '791896838881017936';
 
-client.once('ready', () => {
+
+client.once('ready', async () => {
     client.user.setPresence({
         status: 'online',
         activity: {
@@ -48,7 +50,17 @@ client.once('ready', () => {
         }
     })
 
+    const commands = await client.api
+    .applications(client.user.id)
+    .guilds(guildId)
+    .commands.get()
     
+    console.log(commands);
+
+    
+
+
+
     
 });
 
@@ -75,13 +87,12 @@ client.distube
 
 client.on('message', message =>{
 
-  
 
-   var mentions = message.mentions.members.array();
-    
-   //console.log(target.length);
 
-   
+    if(message.content.includes(`<@`)){
+
+        var mentions = message.mentions.members.array();
+      
     var mentionKafka = false;
     var mentionYuriee= false;
 
@@ -108,15 +119,23 @@ client.on('message', message =>{
             message.react('🥇');
             message.react('💖');
             message.react('🔥');
+            message.reply('\nThanks for mentioning my master, he will reply you soon. In the meanwhile please let me know how can my master help you?\nDo you have a business plan need an accelerating support and help?\npress 1 for business talk\nAre you going throug existential crisis?\nPlease press 2 for guidence\nAre you dealing with trauma and overthinking?\nPlease 3 for emotional support\n Are you lacking a feel of hope, sense of belonging, peace and gratitude\nplease press 4 for spiritual support\nAre you dealing with mental or physical abuse?\nPlease press 5 for SOS');
+                
          
         }
 
         if(mentionYuriee){
 
             message.react('😽');
+            message.reply('\nThanks for mentioning my master kafka\'s wife.please let me know how can your bhauju help you?')
             
             }
 
+            
+
+    }
+
+   
    
     
     // if(target.id==kafkaId) {
@@ -514,6 +533,9 @@ else if (command==="unmute"){
         }
 
 
+
+
+
             if (command == "resume"){
                 try{
                     client.distube.resume(message);
@@ -524,6 +546,25 @@ else if (command==="unmute"){
                 }
        
         }
+
+
+        if (command == "seek"){
+          
+            console.log(Number(args[0])*6000);
+            
+            try{
+                console.log(args[0]);
+               // const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+                client.distube.seek(message,Number(args[0])*6000);
+            }
+
+
+            catch(e){
+                message.channel.send(`invalid request!! currenlty no music played! req by ${message.author}`);
+            }
+
+        }
+
 
 
         if (command == "queue"){
