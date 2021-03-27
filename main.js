@@ -123,10 +123,10 @@ client.on('message', message =>{
             message.react('🔥');
             
             var authorPerson = message.author.id;
-            if(authorPerson!= kafkaId && authorPerson!=yurieeID && authorPerson!=halId){
+            // if(authorPerson!= kafkaId && authorPerson!=yurieeID && authorPerson!=halId){
 
-                message.reply('\nThanks for mentioning my master, he will reply you soon. In the meanwhile please let me know how can my master help you?\nDo you have a business plan need an accelerating support and help?\npress 1 for business talk\nAre you going throug existential crisis?\nPlease press 2 for guidence\nAre you dealing with trauma and overthinking?\nPlease 3 for emotional support\n Are you lacking a feel of hope, sense of belonging, peace and gratitude\nplease press 4 for spiritual support\nAre you dealing with mental or physical abuse?\nPlease press 5 for SOS');
-            }
+            //     message.reply('\nThanks for mentioning my master, he will reply you soon. In the meanwhile please let me know how can my master help you?\nDo you have a business plan need an accelerating support and help?\npress 1 for business talk\nAre you going throug existential crisis?\nPlease press 2 for guidence\nAre you dealing with trauma and overthinking?\nPlease 3 for emotional support\n Are you lacking a feel of hope, sense of belonging, peace and gratitude\nplease press 4 for spiritual support\nAre you dealing with mental or physical abuse?\nPlease press 5 for SOS');
+            // }
 
                 
          
