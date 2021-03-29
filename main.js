@@ -52,12 +52,12 @@ client.once('ready', async () => {
         }
     })
 
-    const commands = await client.api
-    .applications(client.user.id)
-    .guilds(guildId)
-    .commands.get()
+    // const commands = await client.api
+    // .applications(client.user.id)
+    // .guilds(guildId)
+    // .commands.get()
     
-    console.log(commands);
+    // console.log(commands);
 
     
 
@@ -68,8 +68,8 @@ client.once('ready', async () => {
 
 
 client.on('guildMemberAdd', (member)=>{
-    console.log('chriyo');
-    console.log(client.guilds.cache);
+  
+    // console.log(client.guilds.cache);
     
     //console.log(client.guilds.cache.get())    
 
@@ -194,7 +194,7 @@ client.on('message', message =>{
     else if (command=='server'){
         var server = message.guild.id;
         console.log(server);
-        //826067464403812364
+        //
     }
     
     // else if(command==='flirt'){
