@@ -189,6 +189,13 @@ client.on('message', message =>{
     else if(command==='fav'){
         client.commands.get('fav').execute(message, args);
     }  
+
+
+    else if (command=='server'){
+        var server = message.guild.id;
+        console.log(server);
+        //826067464403812364
+    }
     
     // else if(command==='flirt'){
     //     if(message.author.username=="Kafka"){
@@ -357,6 +364,14 @@ else if (command==="unmute"){
         else if(command==="av"){
 
                 client.commands.get('avatar').execute(message,args);
+
+        }
+
+
+
+        else if(command=="nasa"){
+
+ client.commands.get('nasa').execute(message,args);
 
         }
 
